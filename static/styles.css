@@ -37,6 +37,9 @@ nav {
     min-height: 100vh;
     z-index: 2;
     position: absolute;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
 }
 .content-images {
     display: flex;
