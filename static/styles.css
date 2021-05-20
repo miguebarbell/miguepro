@@ -1,3 +1,7 @@
+:root {
+    --clr-neon: #E847AE
+}
+
  * {
      margin: 0;
      padding: 0;
@@ -37,19 +41,79 @@ nav {
     min-height: 100vh;
     z-index: 2;
     position: absolute;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
 }
 .content-images {
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     min-height: 60vh;
     text-align: center;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding: 1.5em;
 }
 
 .text {
     padding: 2rem 20rem;
     font-size: 1.1rem;
+}
+
+.content h1 {
+    font-size: 2rem;
+    }
+
+.contact {
+    color: black;
+    text-decoration: none;
+}
+
+.contact:hover {
+    font-family: "Balsamiq Sans";
+    font-size: 1.2rem;
+    color: var(--clr-neon);
+    border: 0.125em solid var(--clr-neon);
+    padding: 0.25em 1em;
+    text-transform: uppercase;
+    border-radius: 0.25em;
+    text-shadow: 0 0 1em var(--clr-neon);
+    box-shadow: inset 0 0 1em var(--clr-neon), 0 0 0.5em var(--clr-neon);
+    position: relative;
+}
+
+.contact:hover::before {
+    content: '';
+    position: absolute;
+    background: var(--clr-neon);
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(2em);
+}
+
+@media screen and (max-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .text {
+        padding: 2em 1em;
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    /* default iPad screens */
+    .text {
+        padding: 2em 5em;
+    }
+}
+
+@media screen and (max-width: 2130px) {
+    /* default iPad screens */
+    .text {
+        padding: 2em 5em;
+    }
+}
+
+li {
+    padding: 1em;
 }

@@ -1,9 +1,13 @@
+
+
+
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 
 timeline
-    .to(".pasto", 10, { y: -300 })
-    .to(".perro", 10, { y: -200 }, "-=10")
+    .to(".pasto", 10, { y: -100 })
+    .fromTo(".perro", {y: 50}, { y: -200, duration: 10 }, "-=10")
+    // .to(".perro", 10, { y: -200 }, "-=10")
     .fromTo(".bg", { y: -50 }, { y: 0, duration: 10 }, "-=10")
     .to(".content", 10, { top: "0%" }, "-=10")
     .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 3 })
