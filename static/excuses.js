@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', load_excuse)
 
-const excuses = Array("Are you using Internet Explorer Web Browser?",
+const excuses = Array(
+	"Are you using Internet Explorer Web Browser?",
 	"That error means it was successful.",
 	"It works for me.",
 	"That's weird...",
