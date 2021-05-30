@@ -1,6 +1,8 @@
 
 
-
+document.querySelector(".contact").addEventListener('click' , function () {
+    window.location.href = "mailto:miguel.minny@aleeas.com"
+});
 let controller = new ScrollMagic.Controller();
 let timeline = new TimelineMax();
 

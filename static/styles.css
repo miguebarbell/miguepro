@@ -66,9 +66,11 @@ nav {
 .contact {
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .contact:hover {
+    text-decoration: none;
     font-family: "Balsamiq Sans";
     font-size: 1.2rem;
     color: var(--clr-neon);
