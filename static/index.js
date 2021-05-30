@@ -20,3 +20,9 @@ let scene = new ScrollMagic.Scene({
     .setTween(timeline)
     .setPin("section")
     .addTo(controller);
+
+const parallax = document.querySelector(".parallax");
+window.addEventListener("scroll", function () {
+    let offset = window.pageXOffset;
+    parallax.style.backgroundPositionY = offset * 0.7 + "px";
+})
