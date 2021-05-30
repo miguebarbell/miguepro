@@ -93,26 +93,6 @@ nav {
     filter: blur(2em);
 }
 
-@media screen and (max-width: 480px) {
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
-    .text {
-        padding: 2em 1em;
-    }
-}
-
-@media screen and (max-width: 1900px) {
-    /* default iPad screens */
-    .text {
-        padding: 2em 5em;
-    }
-}
-
-@media screen and (max-width: 2130px) {
-    /* default iPad screens */
-    .text {
-        padding: 2em 5em;
-    }
-}
 
 li {
     padding: 1em;
@@ -123,6 +103,7 @@ li {
 }
 
 #contact{
+    color: rebeccapurple;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +117,7 @@ li {
 
 .glass {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(2rem);
 
 
 }
@@ -154,8 +135,9 @@ li {
 }
 
 #profilepic {
-    width: 15%;
+    width: 25%;
     border-radius: 50%;
+    padding: 1em;
 }
 
 .links {
@@ -166,4 +148,49 @@ li {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.br {
+    padding-bottom: 1em;
+}
+@media screen and (max-width: 1000px) {
+    .card {
+        width: 90%;
+    }
+    .upperlink {
+    flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+    .text {
+        padding: 2em 1em;
+    }
+}
+
+
+@media screen and (max-width: 1900px) {
+    /* default iPad screens */
+    .text {
+        padding: 2em 5em;
+    }
+    .card {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 2130px) {
+    /* default iPad screens */
+    .text {
+        padding: 2em 5em;
+    }
 }
