@@ -118,7 +118,7 @@ li {
 }
 
 .glass {
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     backdrop-filter: blur(2rem);
 
 
@@ -157,7 +157,7 @@ li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
+    width: 60%;
 }
 
 .br {
@@ -204,4 +204,17 @@ li {
     #contact {
         background-size: contain;
     }
+}
+
+.black {
+    color: black;
+}
+
+.fa-github:hover,
+.fa-linkedin-in:hover,
+.fa-envelope-square:hover {
+    padding: 0.2rem;
+    border-radius: 9px;
+
+    background-color: rgba(9,80,255,0.6);
 }
