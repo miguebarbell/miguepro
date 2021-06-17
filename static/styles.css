@@ -41,7 +41,7 @@ nav {
 .content {
     width: 100%;
     background: rgb(24, 24, 24);
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     z-index: 2;
     position: absolute;
 }
@@ -51,7 +51,7 @@ nav {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    min-height: 60vh;
+    /*min-height: 60vh;*/
     text-align: center;
     flex-flow: row wrap;
     list-style-type: none;
