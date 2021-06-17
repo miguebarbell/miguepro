@@ -181,6 +181,9 @@ li {
     .text {
         padding: 2em 1em;
     }
+    .content {
+        height: auto;
+    }
 }
 
 
