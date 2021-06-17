@@ -9,6 +9,7 @@
      color: #fff;
      font-family: "Poppins", sans-serif;
  }
+
 nav {
     position: absolute;
     width: 100%;
@@ -20,6 +21,7 @@ nav {
 .container {
     height: 100vh;
 }
+
 .container img {
     width: 100%;
     position: absolute;
@@ -27,6 +29,7 @@ nav {
     object-fit: cover;
     z-index: -1;
 }
+
 .main-title {
     position: absolute;
     top: 30%;
@@ -42,6 +45,7 @@ nav {
     z-index: 2;
     position: absolute;
 }
+
 .content-images {
     display: flex;
     flex-direction: row;
@@ -71,7 +75,7 @@ nav {
 
 .contact:hover {
     text-decoration: none;
-    font-family: "Balsamiq Sans";
+    font-family: "Balsamiq Sans", sans-serif;
     font-size: 1.2rem;
     color: var(--clr-neon);
     border: 0.125em solid var(--clr-neon);
@@ -218,3 +222,4 @@ li {
 
     background-color: rgba(9,80,255,0.6);
 }
+
