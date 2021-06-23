@@ -204,6 +204,11 @@ li {
     }
 }
 
+@media screen and (max-height: 900px) {
+    .content {
+        height: auto;
+    }
+
 @media screen and (max-width: 320px) {
     .content {
         height: auto;
