@@ -18,34 +18,45 @@ nav {
     justify-content: space-between;
 }
 
-.container {
-    height: 100vh;
-}
+
 
 .container img {
     width: 100%;
     position: absolute;
+    /*position: relative;*/
     height: 110vh;
     object-fit: cover;
     z-index: -1;
 }
 
+.container {
+    height: 100vh;
+}
 .main-title {
     position: absolute;
     top: 30%;
-    left: 50%;
+    left: 30%;
     font-size: 6rem;
-    transform: translate(-50%, -30%);
+    transform: translate(-30%, -70%);
+    max-height: 70vh;
 }
 
-.content {
+.content, #deep-learning {
     width: 100%;
     background: rgb(24, 24, 24);
-    /*min-height: 100vh;*/
+    min-height: 100vh;
     z-index: 2;
     position: absolute;
+    /*position: relative;*/
+}
+.content {
+    background: rgb(24, 24, 24);
 }
 
+#deep-learning {
+    background-color: #1f27c7;
+    position: relative;
+}
 .content-images {
     display: flex;
     flex-direction: row;
@@ -104,27 +115,32 @@ li {
     padding: 1em;
 }
 
-.main-title {
-    max-height: 70vh;
-}
-
 #contact{
     color: rebeccapurple;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 4;
+    /*z-index: 4;*/
+    z-index: 2;
     height: 70vh;
     background: url(images/index/lanudo.jpg) fixed;
     background-size: cover;
+    /*position: absolute;*/
 
+    /*padding: 20vh 0;*/
+}
+
+#racoon{
+    background: url(images/index/raccoon-1.jpg) fixed;
+    background-size: cover;
+    z-index: 2;
+    min-height: 30vh;
 }
 
 .glass {
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     backdrop-filter: blur(2rem);
-
 
 }
 
@@ -181,7 +197,7 @@ li {
     .text {
         padding: 2em 1em;
     }
-    .content {
+    .content, #deep-learning {
         height: auto;
         position: relative;
     }
@@ -196,6 +212,11 @@ li {
     .card {
         width: 80%;
     }
+
+    .content, #deep-learning {
+        height: auto;
+        position: relative;
+    }
 }
 
 @media screen and (max-width: 2130px) {
@@ -206,23 +227,25 @@ li {
 }
 
 @media screen and (max-height: 900px) {
-    .content {
+    .content, #deep-learning, #contact {
         height: auto;
         position: relative;
     }
 
-@media screen and (max-width: 320px) {
-    .content {
-        height: auto;
-        position: relative;
-    }
-    #contact {
-        background-size: contain;
-    }
-}
+    @media screen and (max-width: 320px) {
+        .content, #deep-learning {
+            height: auto;
+            position: relative;
+        }
 
-.black {
-    color: black;
+        #contact {
+            background-size: contain;
+        }
+    }
+
+    .black {
+        color: black;
+    }
 }
 
 .fa-github:hover,
@@ -231,6 +254,5 @@ li {
     padding: 0.2rem;
     border-radius: 9px;
 
-    background-color: rgba(9,80,255,0.6);
+    background-color: rgba(9, 80, 255, 0.6);
 }
-
