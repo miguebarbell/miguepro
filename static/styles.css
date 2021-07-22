@@ -136,6 +136,7 @@ li {
     background-size: cover;
     z-index: 2;
     min-height: 30vh;
+    /*position: absolute;*/
 }
 
 .glass {
@@ -192,7 +193,7 @@ li {
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
     /* styles for mobile browsers smaller than 480px; (iPhone) */
     .text {
         padding: 2em 1em;
@@ -201,10 +202,14 @@ li {
         height: auto;
         position: relative;
     }
+    #deep-learning {
+        /*position: relative;*/
+    }
 }
 
 
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1500px) {
+/*@media screen and (max-width: 1900px) {*/
     /* default iPad screens */
     .text {
         padding: 2em 5em;
@@ -213,10 +218,10 @@ li {
         width: 80%;
     }
 
-    .content, #deep-learning {
-        height: auto;
-        position: relative;
-    }
+    /*.content, #deep-learning {*/
+    /*    height: auto;*/
+    /*    position: relative;*/
+    /*}*/
 }
 
 @media screen and (max-width: 2130px) {
@@ -229,16 +234,16 @@ li {
 @media screen and (max-height: 900px) {
     .content, #deep-learning, #contact {
         height: auto;
-        position: relative;
+        /*position: relative;*/
     }
 
     @media screen and (max-width: 320px) {
-        .content, #deep-learning {
-            height: auto;
-            position: relative;
-        }
+        /*.content, #deep-learning {*/
+        /*    height: auto;*/
+        /*    position: relative;*/
+        /*}*/
 
-        #contact {
+        #contact, #racoon {
             background-size: contain;
         }
     }
@@ -255,4 +260,9 @@ li {
     border-radius: 9px;
 
     background-color: rgba(9, 80, 255, 0.6);
+}
+
+.image-reference {
+    width: 480px;
+    height: 270px;
 }
