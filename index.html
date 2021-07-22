@@ -2,7 +2,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Miguel Rojas Portafolio</title>
+    <title>Miguel R</title>
     <link rel="stylesheet" href="./static/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -16,7 +16,7 @@
     </nav>
     <div class="container">
 
-        <h2 class="main-title" title="Excuse from a Lazy Programmer. Click for another" onclick="load_excuse()">
+        <h2 id="lazy" class="main-title" title="Excuse from a Lazy Programmer. Click for another" onclick="load_excuse()">
             Have a nice day.
         </h2>
         <img src="static/images/index/background.jpg" class="bg" alt="Landscape.">
@@ -56,12 +56,12 @@
             </li>
         </ul>
         <p class="text">Four Django-Javascript projects. You can see the code or download it from github.</p>
-            <p class="text">SafeApp: Password manager, save, edit, generate strong passwords, export database, delete user, that have the capability of generate random and strong passwords, the length and symbols are set from the user.</p>
-            <p class="text">Network: Twitter like social network website for making posts and following users. makes API calls to gather the posts.</p>
-            <p class="text">Mail: Simple email client, can send, receive, archive and reply the messages. Make API calls for send and receive emails.</p>
-            <p class="text">eCommerce: e-Bay like ecommerce auction site that will allow users to post auctions listings, place bids on listings, comment on those listings and add listing to a watchlist.</p>
-        <p class="text">
-            These were the projects that lead me to the <a href="https://online-learning.harvard.edu/course/cs50s-web-programming-python-and-javascript?delta=0">web programmer certification</a>, issued from <a href="https://online-learning.harvard.edu">HarvardX</a>.
+        <p class="text">SafeApp: Password manager, save, edit, generate strong passwords, export database, delete user,
+            that have the capability of generate random and strong passwords, the length and symbols are set from the user.</p>
+        <p class="text">Network: Twitter like social network website for making posts and following users. makes API calls to gather the posts.</p>
+        <p class="text">Mail: Simple email client, can send, receive, archive and reply the messages. Make API calls for send and receive emails.</p>
+        <p class="text">eCommerce: e-Bay like ecommerce auction site that will allow users to post auctions listings, place bids on listings, comment on those listings and add listing to a watchlist.</p>
+        <p class="text">These were the projects that lead me to the <a href="https://online-learning.harvard.edu/course/cs50s-web-programming-python-and-javascript?delta=0">web programmer certification</a>, issued from <a href="https://online-learning.harvard.edu">HarvardX</a>.
         </p>
     </div>
     </div>
@@ -71,7 +71,7 @@
 
 <section id="deep-learning">
     <br>
-    <h1 style="text-align: center; padding: 10px">Deep Learning / OpenCV Practitioneer</h1>
+    <h1 style="text-align: center; padding: 10px">Computer Vision, Deep Learning, and OpenCV Practitioner</h1>
 
     <div>
         <ul class="content-images">
@@ -85,13 +85,13 @@
                 <img class="image-reference" src="./static/images/deeplearning/giff.gif" alt="" />
             </a>
                 <h4>Face Recognition</h4>
-                <h3>Fast!</h3>
+                <h3>Can recognize faces from a source picture</h3>
             </li>
             <li><a href="https://github.com/miguebarbell/cs50w-mail">
                 <img class="image-reference" src="./static/images/deeplearning/gifa.gif" alt="" />
             </a>
                 <h4>Anonymizer</h4>
-                <h3>Now you can be safe on internet</h3>
+                <h3>Now you can be safer on internet</h3>
             </li>
             <li><a href="https://github.com/miguebarbell/cs50w-mail">
                 <img class="image-reference" src="./static/images/deeplearning/gifh.gif" alt="" />
@@ -100,9 +100,31 @@
                 <h3>Experimenting with aruco tags</h3>
             </li>
         </ul>
-        <p class="text">All these projects I did it while was doing all the courses in pyimagesearch university.<br><br><br>
-            this is a space?
-        </p>
+        <p class="text">These are some projects made by myself, trying to create new ideas in this world full of great
+            brains.<br>I'm gonna start a OCR project, still thinking about the capabilities and the innovation that I
+            can reach on it, stay tuned.</p>
+<!--        todo: append the face dataset to the description-->
+        <p class="text">Sympathy Score: I use a face dataset consisted of XXX of smiling faces and others XXX not smiling.
+            It make a face detection of every face in the picture, then pass every face to the model. You can tweak the
+            parameters. So will draw a green rectangle for people who pass the threshold of smiling, and a red one for the
+            face who didn't, also write the percentage of the "smile" detected. Then compute all faces and give you a Sympathy
+            Score, drawn in the top left corner with a percentage of the people that pass the smile threshold, above 50%
+            draw it in green, else in red.
+            You can go further and implement it in a video of the reaction of the people when you tell a joke, you know,
+            this AI will tell you with cold blood if you are funny or not.</p>
+        <p class="text">Face Recognition: Easy and fast deployment of this script. Have a clean pipeline, where you need
+        to provide a picture of the person (or persons) you want to detect, then you have a script where you pull the
+        faces from that, so you provide the picture (or pictures) where you want to apply the script.</p>
+        <p class="text">Anonymizer: Easy command line script that permit apply a filter (can be a black box, a blur box,
+            big pixels or cover just the eyes) to a face. I didn't see any other app that do that, just Signal for
+            cellphone. The script will ask you for every face detected if you want to apply the filter, so if you want
+            to share a picture of just you and you are with more people, this could help to protect the others identities.</p>
+        <p class="text">Height estimator: With the help of an aruco tag, you will be able to estimate the height of someone.
+            This have great results in a controlled environment (like the size of the aruco tag, the distance and the angle
+            of the picture), so if you want to save the picture of the height of your children without draw the line in your
+            wall, consider this script, will save you money on painting. I use my trigonometric knowledge ahahahaha.</p>
+        <p class="text">All these projects I did it while was doing all the courses in <a href="https://pyimagesearch.mykajabi.com/products/pyimagesearch-university-full-access-plan">
+            pyimagesearch university</a> with Adrian Rosebrock as main instructor.</p>
     </div>
 </section>
 
@@ -117,7 +139,7 @@
                     <h1 class="black">Miguel Rojas</h1>
                     <h3 class="br black">"Improving the world with python"</h3>
                     <br>
-                    <h2 class="black">Sorry, I used pictures of my dog (his name is lana) for have a friendly site.</h2>
+                    <h2 class="black">Sorry, I used pictures of my dog (his name is lana), and a funny racoon for have a friendly site.</h2>
                 </div>
                  </div>
                 <div class="links">
@@ -138,7 +160,8 @@
 ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
-<script src="./static/index.js"></script>
+<script src="static/parallax.js"></script>
+<script src="static/index.js"></script>
 <script src="./static/excuses.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 </body>
@@ -146,4 +169,4 @@
 
 
 <!--TODO: hacer un div con dmenu-->
-<!--TODO: hacer un div con facial recognition-->
+<!--TODO: download the external libraries-->
