@@ -39,7 +39,7 @@ nav {
     max-height: 70vh;
 }
 
-.content, #deep-learning {
+.content, #web-programmer {
     width: 100%;
     background: rgb(24, 24, 24);
     min-height: 100vh;
@@ -51,7 +51,7 @@ nav {
     background: rgb(24, 24, 24);
 }
 
-#deep-learning {
+#web-programmer {
     background-color: #1f27c7;
     position: relative;
 }
@@ -200,11 +200,11 @@ li {
     .text {
         padding: 2em 1em;
     }
-    .content, #deep-learning {
+    .content, #web-programmer {
         height: auto;
         position: relative;
     }
-    #deep-learning {
+    #web-programmer {
         /*position: relative;*/
     }
 }
@@ -237,7 +237,7 @@ li {
 }
 
 @media screen and (max-height: 900px) {
-    .content, #deep-learning, #contact {
+    .content, #web-programmer, #contact {
         height: auto;
         /*position: relative;*/
     }
