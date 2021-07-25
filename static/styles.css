@@ -67,6 +67,15 @@ nav {
     padding: 1.5em;
 }
 
+.content-images li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-images a:hover {
+    cursor: pointer;
+}
+
 .text {
     padding: 2rem 20rem;
     font-size: 1.1rem;
