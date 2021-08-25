@@ -16,6 +16,7 @@ const winningTextElement = document.querySelector('[data-winning-message-text]')
 const winningMessageElement = document.getElementById('winningMessage')
 const restartButton = document.getElementById('restartButton')
 let circleTurn
+let winCombination
 
 
 startGame()
@@ -23,10 +24,12 @@ startGame()
 restartButton.addEventListener('click', startGame)
 
 function startGame() {
+    winCombination = []
     circleTurn = false
     cellElements.forEach(cell => {
         cell.classList.remove(X_CLASS)
         cell.classList.remove(CIRCLE_CLASS)
+        cell.classList.remove('red', 'disable')
         cell.removeEventListener('click', handleClick)
         cell.addEventListener('click', handleClick, { once: true})
     })
@@ -40,7 +43,10 @@ function handleClick(e) {
     const currentClass = circleTurn ? CIRCLE_CLASS : X_CLASS
     placeMarker(cell, currentClass)
     if (checkWin(currentClass)) {
-        endGame(false)
+        markRedWin(winCombination)
+        setTimeout(() => { endGame(false)}, 2000)
+
+        // endGame(false)
     } else if (isDraw()) {
         endGame(true)
     } else {
@@ -71,6 +77,7 @@ function setHoverClass() {
 function checkWin(currentClass) {
     return WINNING_COMBINATION.some(combination => {
         return combination.every(index => {
+            winCombination = combination
             return cellElements[index].classList.contains(currentClass)
         })
     })
@@ -89,5 +96,15 @@ function endGame(draw) {
 function isDraw() {
     return [...cellElements].every(cell => {
         return cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+    })
+}
+
+function markRedWin(combination) {
+    console.log(combination)
+    for (let cellNumber in combination) {
+        document.getElementById(combination[cellNumber]).classList.add('red')
+    }
+    cellElements.forEach(cell => {
+        cell.classList.add('disable')
     })
 }

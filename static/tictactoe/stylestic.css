@@ -58,6 +58,17 @@ body {
     cursor: not-allowed;
 }
 
+/*.red {*/
+/*    background-color: red;*/
+/*}*/
+
+.cell.circle.red::before,
+.cell.circle.red::after,
+.cell.x.red::before,
+.cell.x.red::after {
+    background-color: red;
+}
+
 .cell.circle::before,
 .cell.circle::after,
 .cell.x::before,
@@ -147,3 +158,8 @@ body {
 .winning-message.show {
     display: flex;
 }
+
+.disable {
+    pointer-events: none;
+}
+
