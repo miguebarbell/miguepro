@@ -284,3 +284,7 @@ li {
     width: 480px;
     height: 270px;
 }
+
+.games {
+    cursor: pointer;
+}
