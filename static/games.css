@@ -18,12 +18,17 @@
  .game {
      border: 1px solid #141864;
      padding: 3em;
+     color: #141864;
  }
 
  .game:hover {
-     background-color: #141864;
+     /*width: 500px;*/
+     /*height: 375px;*/
+     background-image: url('tictactoe/tictactoe.gif');
+     background-position: center;
+     background-size: cover;
      cursor: pointer;
-
+     color: rgba(0, 0, 0, 0);
  }
 .notice {
     background-color: #141864;
@@ -32,4 +37,8 @@
 }
 h2 {
     padding: 0 1rem;
+}
+
+.games a {
+    text-decoration: none;
 }
