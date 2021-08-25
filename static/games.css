@@ -1,0 +1,35 @@
+#navbar {
+    color: white;
+    background-color: black
+}
+.games {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    /*align-content: center;*/
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.container-games {
+    display: flex;
+    flex-direction: column;
+}
+ .game {
+     border: 1px solid #141864;
+     padding: 3em;
+ }
+
+ .game:hover {
+     background-color: #141864;
+     cursor: pointer;
+
+ }
+.notice {
+    background-color: #141864;
+    color: white;
+    font-size: 1.5rem;
+}
+h2 {
+    padding: 0 1rem;
+}

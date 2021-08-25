@@ -13,7 +13,7 @@ body {
 
 .board {
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -56,6 +56,17 @@ body {
 .cell.x,
 .cell.circle {
     cursor: not-allowed;
+}
+
+/*.red {*/
+/*    background-color: red;*/
+/*}*/
+
+.cell.circle.red::before,
+.cell.circle.red::after,
+.cell.x.red::before,
+.cell.x.red::after {
+    background-color: red;
 }
 
 .cell.circle::before,
@@ -147,3 +158,8 @@ body {
 .winning-message.show {
     display: flex;
 }
+
+.disable {
+    pointer-events: none;
+}
+
