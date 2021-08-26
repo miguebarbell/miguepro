@@ -58,10 +58,6 @@ body {
     cursor: not-allowed;
 }
 
-/*.red {*/
-/*    background-color: red;*/
-/*}*/
-
 .cell.circle.red::before,
 .cell.circle.red::after,
 .cell.x.red::before,

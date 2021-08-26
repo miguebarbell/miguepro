@@ -45,8 +45,6 @@ function handleClick(e) {
     if (checkWin(currentClass)) {
         markRedWin(winCombination)
         setTimeout(() => { endGame(false)}, 2000)
-
-        // endGame(false)
     } else if (isDraw()) {
         endGame(true)
     } else {
