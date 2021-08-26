@@ -22,8 +22,6 @@
  }
 
  .game:hover {
-     /*width: 500px;*/
-     /*height: 375px;*/
      background-image: url('tictactoe/tictactoe.gif');
      background-position: center;
      background-size: cover;
