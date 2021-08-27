@@ -5,6 +5,8 @@
     /*align-content: center;*/
     align-items: center;
     justify-content: center;
+}
+.games a {
     text-decoration: none;
 }
 .container-games {
@@ -15,15 +17,24 @@
      border: 1px solid #141864;
      padding: 3em;
      color: #141864;
+     height: 187px;
+     width: 250px;
+     font-family: 'Press Start 2P', cursive;
+     font-size: 16px;
  }
 
  .game:hover {
-     background-image: url('tictactoe/tictactoe.gif');
      background-position: center;
      background-size: cover;
      cursor: pointer;
      color: rgba(0, 0, 0, 0);
  }
+.tictactoe:hover {
+    background-image: url('tictactoe/tictactoe.gif');
+ }
+.tetris:hover{
+    background-image: url('tetris/tetris.gif');
+}
 .notice {
     background-color: #141864;
     color: white;
@@ -63,5 +74,4 @@ h2 {
 /*}*/
 /*nav {*/
 /*    display: flex;*/
-/*    justify-content: space-between;*/
-/*}*/
+/*    justify-content: s
