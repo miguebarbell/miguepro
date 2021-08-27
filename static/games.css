@@ -1,7 +1,3 @@
-#navbar {
-    color: white;
-    background-color: black
-}
 .games {
     width: 100vw;
     height: 80vh;
@@ -9,6 +5,8 @@
     /*align-content: center;*/
     align-items: center;
     justify-content: center;
+}
+.games a {
     text-decoration: none;
 }
 .container-games {
@@ -19,15 +17,24 @@
      border: 1px solid #141864;
      padding: 3em;
      color: #141864;
+     height: 187px;
+     width: 250px;
+     font-family: 'Press Start 2P', cursive;
+     font-size: 16px;
  }
 
  .game:hover {
-     background-image: url('tictactoe/tictactoe.gif');
      background-position: center;
      background-size: cover;
      cursor: pointer;
      color: rgba(0, 0, 0, 0);
  }
+.tictactoe:hover {
+    background-image: url('tictactoe/tictactoe.gif');
+ }
+.tetris:hover{
+    background-image: url('tetris/tetris.gif');
+}
 .notice {
     background-color: #141864;
     color: white;
@@ -37,6 +44,35 @@ h2 {
     padding: 0 1rem;
 }
 
-.games a {
-    text-decoration: none;
-}
+/*.games a {*/
+/*    text-decoration: none;*/
+/*}*/
+/*#navbar {*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    background-color: white;*/
+/*}*/
+
+/*#navbar a {*/
+/*    text-decoration: none;*/
+/*}*/
+/*.nav-button {*/
+/*    border: 2px solid rgba(30, 255, 144, 0.9);*/
+/*    padding: 0.5em;*/
+/*    cursor: pointer;*/
+/*    background-color: rgba(30, 255, 144, 0.4);*/
+/*    color: black;*/
+/*}*/
+
+/*.nav-button:hover {*/
+/*    background-color: rgba(30, 255, 144, 0.9);*/
+/*}*/
+/*.menu {*/
+/*    display: flex;*/
+/*    justify-content: flex-start;*/
+/*    background-color: white;*/
+/*}*/
+/*nav {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*}*/

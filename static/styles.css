@@ -303,3 +303,8 @@ li {
     display: flex;
     justify-content: flex-start;
 }
+
+.menu,
+nav a {
+    text-decoration: none;
+}
