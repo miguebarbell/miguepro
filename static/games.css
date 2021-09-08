@@ -35,6 +35,9 @@
 .tetris:hover{
     background-image: url('tetris/tetris.gif');
 }
+.memory:hover{
+    background-image: url('memory/memory.gif');
+}
 .notice {
     background-color: #141864;
     color: white;
