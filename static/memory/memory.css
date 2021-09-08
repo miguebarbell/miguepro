@@ -1,5 +1,5 @@
 * {
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
     font-family: 'Press Start 2P', cursive;
 }
 body {
@@ -12,14 +12,12 @@ body {
     /*align-content: center;*/
 }
 .grid {
+    box-sizing: content-box;
     display: flex;
     flex-wrap: wrap;
     height: 400px;
     width: 600px;
     border: 1px solid black;
-
-    /*width: 60vh;*/
-    /*height: 60vh;*/
 }
 .disable {
     pointer-events: none;

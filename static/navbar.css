@@ -20,6 +20,9 @@
 nav a {
     text-decoration: none;
 }
+body {
+    margin: 0;
+}
 
 nav {
     position: absolute;

@@ -1,5 +1,6 @@
 * {
   font-family: 'Press Start 2P', cursive;
+  box-sizing: border-box;
 }
 
 .grid {
@@ -42,4 +43,10 @@
 
 .sound-item{
   cursor:pointer;
+}
+body {
+  margin: 0;
+}
+.board {
+  padding-top: 5%
 }
