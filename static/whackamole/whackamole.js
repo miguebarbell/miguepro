@@ -1,5 +1,6 @@
 
 const grid = document.querySelector('.grid')
+const hardFactor = 0.7
 function createGrid() {
     // create 9 div
     for (let i = 1; i <= 9; i++) {
@@ -28,6 +29,7 @@ function start() {
     let currentTime = timeLeft.textContent
 
     function randomSquare() {
+
         // remove all mole class
         square.forEach(className => {
             className.classList.remove('mole')
@@ -47,33 +49,52 @@ function start() {
             }
         })
     })
-
+    let timeout = 1000
     let timerId = setInterval(countDown, 1000)
-
+    timerMole = setInterval(randomSquare, timeout)
     function moveMole() {
         let timerId = null
-        timerId = setInterval(randomSquare, 1000)
-    }
+        timerMole = setInterval(randomSquare, timeout)
 
+    }
     function countDown() {
         currentTime--
         timeLeft.textContent = currentTime
+        makeItHarder(currentTime)
         if (currentTime == 0) {
+            clearInterval(timerMole)
+            clearInterval(timerId)
             const winningTextElement = document.querySelector('[data-winning-message-text]')
             const winningMessageElement = document.getElementById('winningMessage')
             winningTextElement.innerText = `Hitted ${result} times to the mole,\n CONGRATULATIONS,\n you made it!!`
             winningMessageElement.classList.add('show')
             document.querySelector('#startButton').onclick = restart
-            // restart()
-            // clearInterval(timerId)
-            // alert('GAME OVER')
         }
     }
-    moveMole()
+    function resetInterval() {
+        clearInterval(timerMole)
+        timerMole = setInterval(randomSquare, timeout)
+    }
+    function makeItHarder (time) {
+        if (time == 50) {
+            timeout *= hardFactor
+            resetInterval()
+        } else if (time == 40) {
+            timeout *= hardFactor
+            resetInterval()
+        } else if (time == 30) {
+            timeout *= hardFactor
+        } else if (time == 20) {
+            timeout *= hardFactor
+            resetInterval()
+        } else if (timeout == 10) {
+            timeout *= hardFactor
+            resetInterval()
+        }
+    }
 }
 start()
 function restart() {
     window.location.reload()
 }
 document.querySelector('#restartButton').onclick = restart
-// document.querySelector('#startButton').onclick = restart
