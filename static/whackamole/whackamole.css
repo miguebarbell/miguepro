@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    }
+body {
+    margin: 0;
+}
+
+.board {
+    padding-top: 5%;
+}
+.grid {
+
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(3, auto);
+}
+.square {
+    width: 20rem;
+    height: 20rem;
+    border: 1px solid black;
+}
+.mole {
+    background-size: cover;
+    background-image: url('trumpete.jpg');
+}
+.disable {
+    pointer-events: none;
+}
+
