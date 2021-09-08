@@ -1,3 +1,4 @@
+// todo: create a level chooser
 document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
 
