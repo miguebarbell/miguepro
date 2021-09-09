@@ -21,8 +21,8 @@ body {
     grid-template-columns: repeat(3, auto);
 }
 .square {
-    width: 20rem;
-    height: 20rem;
+    width: 25vh;
+    height: 25vh;
     border: 1px solid black;
 }
 .mole {
