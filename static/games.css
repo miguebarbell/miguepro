@@ -64,7 +64,7 @@ h2 {
 @media screem and (max-width: 1200px) {
     .notice {
         display:flex;
-        flex-direction: end;
+        /*flex-direction: end;*/
     }
 }
 body {
