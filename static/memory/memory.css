@@ -12,23 +12,43 @@ body {
     /*align-content: center;*/
 }
 .grid {
-    box-sizing: content-box;
-    display: flex;
-    flex-wrap: wrap;
-    height: 400px;
-    width: 600px;
     border: 1px solid black;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(6, auto);
 }
 .disable {
     pointer-events: none;
 }
 .board {
-    max-height: 80vh;
-    padding-top: 10%;
+    /*max-height: 80vh;*/
+    padding-top: 5%;
     /*width: 100%;*/
     /*height: 80%;*/
     justify-items: center;
     align-items: center;
     justify-content: center;
     align-content: center;
+}
+.card {
+    height: 10vw;
+    width: 10vw;
+}
+/*add support for ipad screen*/
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+    nav {
+        position: relative;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
 }

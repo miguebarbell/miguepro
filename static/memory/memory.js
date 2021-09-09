@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let card = document.createElement('img')
             card.setAttribute('src', 'images/cover.jpeg')
             card.setAttribute('data-id', i)
+            card.setAttribute('class', 'card')
             card.addEventListener('click', flipcard)
             grid.appendChild(card)
         }
