@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Four Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
+    <link rel="stylesheet" href="../winning-message.css">
+</head>
+<body>
+
+<nav>
+    <div id="navbar" class="menu">
+        <a href="../../games.html" class="nav-button">Games</a>
+    </div>
+    <a href="../../index.html" class="nav-button">Home</a>
+</nav>
+<div class="board">
+    <div class="board-header">
+        <h3>Player turn:<span id="player"> Red</span></h3>
+<!--        <h3>Result:<span id="result"></span></h3>-->
+
+        <button id="restartButton">Restart</button>
+    </div>
+    <div id="grid">
+
+    </div>
+</div>
+
+<div class="winning-message" id="winningMessage">
+    <div data-winning-message-text></div>
+    <button id="startButton">Restart</button>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+body {
+    margin: 0;
+}
+
+.board {
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    justify-content: center;
+    align-content: center;
+}
+#grid {
+    /*width: 60vh;*/
+    /*height: 60vh;*/
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(7, auto);
+    background-color: lightgray;
+    border-radius: 1%;
+    border: 1px solid black;
+    padding: 3%;
+    margin: 2rem;
+}
+#grid div {
+    width: 4rem;
+    height: 4rem;
+    /*border: 1px solid lightgray;*/
+}
+.player-one {
+    background-color: red;
+}
+.player-two {
+    background-color: blue;
+}
+.taken {
+    border-radius: 50%;
+}
+#grid div:nth-child(n+43) {
+    border-radius: 0;
+    background-color: #141864;
+    border: 0;
+}
+#grid div:nth-child(n-43) {
+    /*border: 1px solid black;*/
+}
+.disable {
+    pointer-events: none;
+}
+.win {
+    border: 4px solid black;
+}
+.rest {
+    opacity: 0.4;
+}
