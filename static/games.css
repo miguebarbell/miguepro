@@ -1,17 +1,22 @@
 .games {
-    width: 100vw;
-    height: 80vh;
+    margin-top: 20vh;
+    min-width: 80vw;
+    height: 60vh;
     display: flex;
-    /*align-content: center;*/
+    align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
 .games a {
     text-decoration: none;
 }
 .container-games {
+    width: 80vw;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
  .game {
      border: 1px solid #141864;
@@ -41,14 +46,31 @@
 .whackamole:hover{
     background-image: url('whackamole/whackamole.gif')
 }
+.fourup:hover{
+    background-image: url('fourup/fourup.gif')
+}
 .notice {
+
     background-color: #141864;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 h2 {
     padding: 0 1rem;
 }
 * {
     box-sizing: border-box;
+}
+@media screem and (max-width: 1200px) {
+    .notice {
+        display:flex;
+        flex-direction: end;
+    }
+}
+body {
+    display: flex;
+    /*align-items: center;*/
+    /*align-content: center;*/
+    justify-content: center;
+
 }
