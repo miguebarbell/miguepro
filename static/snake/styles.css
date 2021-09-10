@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+body {
+    margin: 0;
+}
+
+.board {
+    padding-top: 5%;
+
+}
+.square {
+    background-color: lightgray;
+    /*border: 1px solid red;*/
+}
+#grid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(100, auto);
+}
+.square {
+    height: 1vh;
+    width: 1vh;
+}
+.snake {
+    background-color: #4caf50;
+}
+.apple {
+    background-color: red;
+    border-radius: 50%;
+}
+#grid div:nth-child(n+7901) {
+    border-bottom: 2px solid black;
+}
+#grid div:nth-child(n+1):nth-child(-n+100) {
+    border-top: 2px solid black;
+}
+#grid div:nth-child(100n+100) {
+    border-right: 2px solid black;
+}
+#grid div:nth-child(100n+1) {
+    border-left: 2px solid black;
+}
+.border {
+    background-color: #373737
+}
