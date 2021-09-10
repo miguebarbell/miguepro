@@ -39,7 +39,8 @@ function nextApple() {
     // appear a random apple
 
     appleIndex = Math.floor(Math.random() * (squares.length-1))
-    while (squares[appleIndex].classList.contains('border')) {nextApple()}
+    while (squares[appleIndex].classList.contains('border') ||
+    (squares[appleIndex].classList.contains('snake'))) {nextApple()}
     squares[appleIndex].classList.add('apple')
 
 }

@@ -46,6 +46,9 @@
 .whackamole:hover{
     background-image: url('whackamole/whackamole.gif')
 }
+.snake:hover{
+    background-image: url('snake/snake.gif')
+}
 .fourup:hover{
     background-image: url('fourup/fourup.gif')
 }
