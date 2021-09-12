@@ -142,14 +142,18 @@ function submitScore(result) {
     }
 }
 function highscores() {
+    // add the functionality to dissapear with a wandom click, and erase the button
     const url = 'https://miguepro.herokuapp.com/scores/wam'
     const highScoresTextElement = document.querySelector('[data-high-scores-text]')
     const highScoresMessageElement = document.getElementById('highScores')
+    highScoresMessageElement.onclick = () => {
+        highScoresMessageElement.classList.add('hide')
+    }
     const div = document.createElement('div')
     // const url = 'http://127.0.0.1:8000/scores/wam'
-    const closeButton = document.querySelector('#closeHighScores')
-    closeButton.addEventListener('click', () => {
-        highScoresMessageElement.classList.add('hide')
+    // const closeButton = document.querySelector('#closeHighScores')
+    // closeButton.addEventListener('click', () => {
+    //     highScoresMessageElement.classList.add('hide')
     fetch(url, {
         // headers: {
         //     'Content-Type' : 'application/json'
@@ -171,7 +175,6 @@ function highscores() {
             highScoresMessageElement.classList.remove('hide')
             highScoresMessageElement.classList.add('show')
             })
-        })
 }
 highscores()
 function showHighScores() {
