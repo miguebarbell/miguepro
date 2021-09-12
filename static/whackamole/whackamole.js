@@ -24,7 +24,7 @@ function start() {
     let hitCell
 
 
-    timeLeft.textContent = 6
+    timeLeft.textContent = 60
     let result = 0
     let currentTime = timeLeft.textContent
 
