@@ -10,7 +10,6 @@ body {
     padding-top: 5%;
 }
 .grid {
-
     width: 100vw;
     height: 80vh;
     display: grid;
@@ -32,4 +31,7 @@ body {
 .disable {
     pointer-events: none;
 }
-
+.pause{
+    background-image: none;
+    background-color: rgba(0, 0, 0, .9);
+}
