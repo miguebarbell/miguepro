@@ -143,8 +143,13 @@ function submitScore(result) {
 }
 function highscores() {
     const url = 'https://miguepro.herokuapp.com/scores/wam'
+    const highScoresTextElement = document.querySelector('[data-high-scores-text]')
+    const highScoresMessageElement = document.getElementById('highScores')
+    const div = document.createElement('div')
     // const url = 'http://127.0.0.1:8000/scores/wam'
     const closeButton = document.querySelector('#closeHighScores')
+    closeButton.addEventListener('click', () => {
+        highScoresMessageElement.classList.add('hide')
     fetch(url, {
         // headers: {
         //     'Content-Type' : 'application/json'
@@ -154,9 +159,6 @@ function highscores() {
     }).then(response => response.json())
         .then(data => {
             // select div in highscores
-            const highScoresTextElement = document.querySelector('[data-high-scores-text]')
-            const highScoresMessageElement = document.getElementById('highScores')
-            const div = document.createElement('div')
             div.classList.add('hsTable')
             div.innerHTML = '<h1>TOP 5 High Scores</h1>'
             for (let i = 0; i < 5; i++) {
@@ -168,8 +170,6 @@ function highscores() {
             }
             highScoresMessageElement.classList.remove('hide')
             highScoresMessageElement.classList.add('show')
-            closeButton.addEventListener('click', () => {
-                highScoresMessageElement.classList.add('hide')
             })
         })
 }
