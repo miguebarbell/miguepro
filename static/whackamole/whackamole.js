@@ -24,7 +24,7 @@ function start() {
     let hitCell
 
 
-    timeLeft.textContent = 60
+    timeLeft.textContent = 6
     let result = 0
     let currentTime = timeLeft.textContent
 
@@ -69,6 +69,7 @@ function start() {
             winningTextElement.innerText = `Hitted ${result} times to the mole,\n CONGRATULATIONS,\n you made it!!`
             winningMessageElement.classList.add('show')
             document.querySelector('#startButton').onclick = restart
+            submitScore(result)
         }
     }
     function resetInterval() {
@@ -98,3 +99,19 @@ function restart() {
     window.location.reload()
 }
 document.querySelector('#restartButton').onclick = restart
+function submitScore(result) {
+    const name = prompt(`You scored ${result}, whats your name?`)
+    const url = 'https://miguepro.herokuapp.com/scores/swam'
+    // const url = 'http://127.0.0.1:8000/scores/swam'
+    const data = { name: name, score: result }
+    console.log(`name: ${name}: score: ${result}`)
+    fetch(url, {
+        headers: {
+          // 'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify(data)}).then(response => {
+            console.log(response)
+    })
+}
