@@ -39,7 +39,7 @@ const moves = {
 let board = new Board(ctx, ctxNext);
 
 initNext();
-showHighScores();
+// showHighScores();
 
 function initNext() {
   // Calculate size of canvas from constants.
@@ -143,7 +143,11 @@ function gameOver() {
   
   sound.pause();
   finishSound.play();
-  checkHighScore(account.score);
+  // checkHighScore()
+  // checkHighScore(account.score);
+  console.log('getting the score')
+  console.log(account.score)
+  submitScore('tetris', account.score)
 
   document.querySelector('#pause-btn').style.display = 'none';
   document.querySelector('#play-btn').style.display = '';
@@ -171,33 +175,35 @@ function pause() {
   sound.pause();
 }
 
-function showHighScores() {
-  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-  const highScoreList = document.getElementById('highScores');
+// function showHighScores() {
+//   const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+//   const highScoreList = document.getElementById('highScores');
+//
+//   highScoreList.innerHTML = highScores
+//     .map((score) => `<li>${score.score} - ${score.name}`)
+//     .join('');
+// }
 
-  highScoreList.innerHTML = highScores
-    .map((score) => `<li>${score.score} - ${score.name}`)
-    .join('');
-}
+// function checkHighScore(score) {
+//
+//   const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+//   const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
+//
+//   if (score > lowestScore) {
+//     submitScore(score)
+//     const name = prompt('You got a highscore! Enter name:');
+//     const newScore = { score, name };
+//     saveHighScore(newScore, highScores);
+//     showHighScores();
+//   }
+// }
 
-function checkHighScore(score) {
-
-  const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-  const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
-
-  if (score > lowestScore) {
-    submitScore(score)
-    const name = prompt('You got a highscore! Enter name:');
-    const newScore = { score, name };
-    saveHighScore(newScore, highScores);
-    showHighScores();
-  }
-}
-
-function saveHighScore(score, highScores) {
-  highScores.push(score);
-  highScores.sort((a, b) => b.score - a.score);
-  highScores.splice(NO_OF_HIGH_SCORES);
-
-  localStorage.setItem('highScores', JSON.stringify(highScores));
-}
+// function saveHighScore(score, highScores) {
+//   highScores.push(score);
+//   highScores.sort((a, b) => b.score - a.score);
+//   highScores.splice(NO_OF_HIGH_SCORES);
+//
+//   localStorage.setItem('highScores', JSON.stringify(highScores));
+// }
+highScores('tetris')
+// document.querySelector(#highScores).onclick
