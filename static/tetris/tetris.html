@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
 <!--    <link rel="stylesheet" href="../games.css">-->
+    <link rel="stylesheet" href="../winning-message.css">
+    <link rel="stylesheet" href="../highscores.css">
     <link rel="stylesheet" href="../navbar.css">
   </head>
   <body>
@@ -19,10 +21,10 @@
   </nav>
   <div class="board">
     <div class="grid">
-      <div class="left-column">
-        <h2>HIGH SCORES</h2>
-        <ol id="highScores"></ol>
-      </div>
+<!--      <div class="left-column">-->
+<!--        <h2>HIGH SCORES</h2>-->
+<!--        <ol id="highScores"></ol>-->
+<!--      </div>-->
       <canvas id="board" class="game-board"></canvas>
       <div class="right-column">
         <div>
@@ -40,12 +42,21 @@
         <button id="pause-btn" onclick="pause()" class="play-button">Pause</button>
       </div>
     </div>
+    <div class="winning-message" id="winningMessage">
+      <div data-winning-message-text></div>
+      <button id="startButton">Restart</button>
+    </div>
+    <div id="highScores">
+      <div data-high-scores-text></div>
+      <!--    <button id="closeHighScores">Close</button>-->
+    </div>
 </div>
     <script type="text/javascript" src="constants.js"></script>
     <script type="text/javascript" src="board.js"></script>
     <script type="text/javascript" src="piece.js"></script>
     <script type="text/javascript" src="sound.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="../scores.js"></script>
 
   </body>
 </html>

@@ -1,3 +1,4 @@
+// TODO: add a pause method
 const grid = document.getElementById('grid');
 for (let i = 0; i < 8000; i++) {
     let div = document.createElement('div');
@@ -10,12 +11,14 @@ let appleIndex = 0;
 let snakeIndex = 4020;
 let snake = [4020,4019,4018]
 let direction = 1
-const intensity = 0.5
+const intensity = 0.9
+let pause = true
 let finishGame = false
-const firstInterval = 1000
+let firstInterval = 1000
 let score = document.querySelector('#result')
 // put a class for the borders
 const squares = grid.childNodes
+let interval
 let e
 // console.log(squares.length)
 
@@ -58,7 +61,8 @@ function moveSnake() {
         // refresh the scoreboard
         // make ir harder
         clearInterval(interval)
-        interval = setInterval(moveSnake, firstInterval*intensity)
+        firstInterval *= intensity
+        interval = setInterval(moveSnake, firstInterval)
     } else {
         // snake just moving, cut the tail!
         let tail = snake.pop()
@@ -69,10 +73,10 @@ function moveSnake() {
     // collisionCheck()
     snakeIndex = snake[0]
     if (finishGame) {endGame()}
-    console.log(snake)
+    // console.log(snake)
 }
 
-let interval = setInterval(moveSnake, firstInterval)
+// let interval = setInterval(moveSnake, firstInterval)
 function collisionCheck() {
     // this should checked after every snake move
     if ((squares[snakeIndex+direction].classList.contains('right') && direction === 1) ||
@@ -85,24 +89,25 @@ function collisionCheck() {
 
 }
 function leadSnake(e) {
-    if (e.keyCode === 39) {
-        // right
-        direction = 1
-        moveSnake()
-    } else if (e.keyCode === 40) {
-        // down
-        direction = width
-        moveSnake()
-    } else if (e.keyCode === 37) {
-        // left
-        direction = -1
-        moveSnake()
-    } else if (e.keyCode === 38) {
-        // up
-        direction = -width
-        moveSnake()
-    }
-}
+    if (pause === false) {
+        if (e.keyCode === 39) {
+            // right
+            direction = 1
+            moveSnake()
+        } else if (e.keyCode === 40) {
+            // down
+            direction = width
+            moveSnake()
+        } else if (e.keyCode === 37) {
+            // left
+            direction = -1
+            moveSnake()
+        } else if (e.keyCode === 38) {
+            // up
+            direction = -width
+            moveSnake()
+        }
+}}
 document.addEventListener('keydown', leadSnake)
 function endGame() {
     // finish the game
@@ -178,3 +183,15 @@ function restart() {
 //     }
 // }
 highScores('snake')
+function pauseGame() {
+    let button = document.querySelector('#Pause')
+    if (pause === false) {
+        pause = true
+        clearInterval(interval)
+        button.innerText = 'Resume'
+    } else {
+        pause = false
+        interval = setInterval(moveSnake, firstInterval)
+        button.innerText = 'Pause'
+    }
+}

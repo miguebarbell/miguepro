@@ -186,6 +186,7 @@ function checkHighScore(score) {
   const lowestScore = highScores[NO_OF_HIGH_SCORES - 1]?.score ?? 0;
 
   if (score > lowestScore) {
+    submitScore(score)
     const name = prompt('You got a highscore! Enter name:');
     const newScore = { score, name };
     saveHighScore(newScore, highScores);
