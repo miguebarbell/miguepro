@@ -23,6 +23,7 @@ body {
     width: 25vh;
     height: 25vh;
     border: 1px solid black;
+    cursor: url('hammer.png'), auto;
 }
 .mole {
     background-size: cover;
@@ -34,4 +35,8 @@ body {
 .pause{
     background-image: none;
     background-color: rgba(0, 0, 0, .9);
+}
+.hit {
+    background-size: cover;
+    background-image: url('trump_hit.jpg');
 }

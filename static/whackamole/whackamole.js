@@ -21,6 +21,7 @@ function start() {
     // pauseGame()
     let score = document.querySelector('#result')
     let hitCell
+    let randomPosition
 
 
     timeLeft.textContent = 60
@@ -32,20 +33,28 @@ function start() {
         // remove all mole class
         square.forEach(className => {
             className.classList.remove('mole')
+            className.classList.remove('hit')
         })
         // select a random cell and add the mole class
-        let randomPosition = square[Math.floor(Math.random() * 9)]
+        // let randomPosition = square[Math.floor(Math.random() * 9)]
+        randomPosition = square[Math.floor(Math.random() * 9)]
         randomPosition.classList.add('mole')
         // assign a hit class
         hitCell = randomPosition.id
     }
 
     square.forEach(id => {
-        id.addEventListener('mouseup', () => {
+        id.addEventListener('mousedown', () => {
             if ((id.id === hitCell) && (pause === false)) {
                 result += 1
                 score.textContent = result
+                randomPosition.classList.remove('mole')
+                randomPosition.classList.add('hit')
+            } else if ((id.id !== hitCell) && (pause === false)){
+                result -= 1
+                score.textContent = result
             }
+            // add if they hit an empty square, it rest one
         })
     })
     let timeout = 1000
