@@ -126,7 +126,7 @@ function checkBoard() {
         combination3.classList.contains('player-two')) {
             endGame('BLUE', i)
         } else if (document.querySelectorAll('.taken').length === 49) {
-            endGame('Draw', -1)
+            endGame('Draw', 69)
         }
         // make the check for a draw, check for 21 blue
     }
