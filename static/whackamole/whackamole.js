@@ -79,7 +79,7 @@ function start() {
             winningTextElement.innerText = `Hit ${result} times to the mole,\n CONGRATULATIONS,\n you made it!!`
             winningMessageElement.classList.add('show')
             document.querySelector('#startButton').onclick = restart
-            submitScore(result)
+            submitScore('wam', result)
         }
     }
     function resetInterval() {
@@ -130,64 +130,64 @@ function restart() {
     window.location.reload()
 }
 document.querySelector('#restartButton').onclick = restart
-function submitScore(result) {
-    const name = prompt(`You scored ${result}, whats your name?`)
-    if ((name !== '') && (name != null)) {
-        const url = 'https://miguepro.herokuapp.com/scores/swam'
-        // const url = 'http://127.0.0.1:8000/scores/swam'
-        const data = { name: name, score: result }
-        console.log(`name: ${name}: score: ${result}`)
-        fetch(url, {
-            headers: {
-              // 'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify(data)}).then(response => {
-                console.log(response)
-        })
-} else {
-        console.log('Not entered any name')
-    }
-}
-function highscores() {
-    // add the functionality to dissapear with a wandom click, and erase the button
-    const url = 'https://miguepro.herokuapp.com/scores/wam'
-    const highScoresTextElement = document.querySelector('[data-high-scores-text]')
-    const highScoresMessageElement = document.getElementById('highScores')
-    highScoresMessageElement.onclick = () => {
-        highScoresMessageElement.classList.add('hide')
-    }
-    const div = document.createElement('div')
-    // const url = 'http://127.0.0.1:8000/scores/wam'
-    // const closeButton = document.querySelector('#closeHighScores')
-    // closeButton.addEventListener('click', () => {
-    //     highScoresMessageElement.classList.add('hide')
-    fetch(url, {
-        // headers: {
-        //     'Content-Type' : 'application/json'
-        // },
-        method: "GET"
-
-    }).then(response => response.json())
-        .then(data => {
-            // select div in highscores
-            div.classList.add('hsTable')
-            div.innerHTML = '<h1>TOP 5 High Scores</h1>'
-            for (let i = 0; i < 5; i++) {
-                console.log(data[i])
-                let divText = document.createElement('p')
-                divText.innerHTML = `<h3>NAME: ${data[i].name}</h3> <h4>SCORE: ${data[i].score}</h4>`
-                div.appendChild(divText)
-                highScoresTextElement.appendChild(div)
-            }
-            highScoresMessageElement.classList.remove('hide')
-            highScoresMessageElement.classList.add('show')
-            })
-}
-highscores()
-function showHighScores() {
-    const highScoresMessageElement = document.getElementById('highScores')
-    highScoresMessageElement.classList.remove('hide')
-    highScoresMessageElement.classList.add('show')
-}
+document.querySelector('#restartButton').onclick = restart
+// function submitScore(result) {
+//     const name = prompt(`You scored ${result}, whats your name?`)
+//     if ((name !== '') && (name != null)) {
+//         const url = 'https://miguepro.herokuapp.com/scores/swam'
+//         // const url = 'http://127.0.0.1:8000/scores/swam'
+//         const data = { name: name, score: result }
+//         console.log(`name: ${name}: score: ${result}`)
+//         fetch(url, {
+//             headers: {
+//               // 'Accept': 'application/json',
+//               'Content-Type': 'application/json'
+//             },
+//             method: "POST",
+//             body: JSON.stringify(data)}).then(response => {
+//                 console.log(response)
+//         })
+// } else {
+//         console.log('Not entered any name')
+//     }
+// }
+// function highscores() {
+//     const url = 'https://miguepro.herokuapp.com/scores/wam'
+//     const highScoresTextElement = document.querySelector('[data-high-scores-text]')
+//     const highScoresMessageElement = document.getElementById('highScores')
+//     highScoresMessageElement.onclick = () => {
+//         highScoresMessageElement.classList.add('hide')
+//     }
+//     const div = document.createElement('div')
+//     div.classList.add('hsTable')
+//     // const url = 'http://127.0.0.1:8000/scores/wam'
+//     // const closeButton = document.querySelector('#closeHighScores')
+//     // closeButton.addEventListener('click', () => {
+//     //     highScoresMessageElement.classList.add('hide')
+//     fetch(url, {
+//         // headers: {
+//         //     'Content-Type' : 'application/json'
+//         // },
+//         method: "GET"
+//
+//     }).then(response => response.json())
+//         .then(data => {
+//             // select div in highscores
+//             div.innerHTML = '<h1>TOP 5 High Scores</h1>'
+//             for (let i = 0; i < 5; i++) {
+//                 console.log(data[i])
+//                 let divText = document.createElement('p')
+//                 divText.innerHTML = `<h3>NAME: ${data[i].name}</h3> <h4>SCORE: ${data[i].score}</h4>`
+//                 div.appendChild(divText)
+//                 highScoresTextElement.appendChild(div)
+//             }
+//             highScoresMessageElement.classList.remove('hide')
+//             highScoresMessageElement.classList.add('show')
+//             })
+// }
+highScores('wam')
+// function showHighScores() {
+//     const highScoresMessageElement = document.getElementById('highScores')
+//     highScoresMessageElement.classList.remove('hide')
+//     highScoresMessageElement.classList.add('show')
+// }
