@@ -82,6 +82,7 @@ const winningArrays = [
     [11, 18, 25, 32],
     [12, 19, 26, 33],
     [13, 20, 27, 34],
+    [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
 ]
 
 
@@ -108,6 +109,7 @@ for (let i=0; i< squares.length; i++) {
     squares[i].setAttribute('onclick', `markIt(${i})`)
 }
 function checkBoard() {
+    // console.log(document.querySelectorAll('.taken').length)
     for (let i = 0; i < winningArrays.length; i++) {
         const combination0 = squares[winningArrays[i][0]]
         const combination1 = squares[winningArrays[i][1]]
@@ -123,7 +125,10 @@ function checkBoard() {
         combination2.classList.contains('player-two') &&
         combination3.classList.contains('player-two')) {
             endGame('BLUE', i)
+        } else if (document.querySelectorAll('.taken').length === 49) {
+            endGame('Draw', -1)
         }
+        // make the check for a draw, check for 21 blue
     }
 }
 function restart() {
@@ -139,7 +144,7 @@ function winDialog(player) {
 }
 function endGame(player, combination) {
     console.log(winningArrays[combination])
-    for (let i=0; i < squares.length; i++) {
+    for (let i = 0; i < squares.length; i++) {
         squares[i].classList.add('disable')
         if (winningArrays[combination].includes(i)) {
             squares[i].classList.add('win')
@@ -147,10 +152,16 @@ function endGame(player, combination) {
             squares[i].classList.add('rest')
         }
     }
-    setTimeout(function() {winDialog(player)}, 3000)
+    setTimeout(function () {
+        winDialog(player)
+    }, 3000)
     // const winningTextElement = document.querySelector('[data-winning-message-text]')
     const winningMessageElement = document.getElementById('winningMessage')
-    winningTextElement.innerText = `${player} WON!,\n CONGRATULATIONS,\n thanks both for playing!`
+    if (player === 'Draw') {
+        winningTextElement.innerText = `it's a DRAW,\n let's undraw it!!!`
+    } else {
+        winningTextElement.innerText = `${player} WON!,\n CONGRATULATIONS,\n thanks both for playing!`
+    }
     winningMessageElement.classList.add('show')
     document.querySelector('#startButton').onclick = restart
 }
