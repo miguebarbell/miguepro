@@ -1,4 +1,4 @@
-const local_emulation = true
+const local_emulation = false
 const highScoresMessageElement = document.getElementById('highScores')
 const highScoresTextElement = document.querySelector('[data-high-scores-text]')
 // document.querySelector('#restartButton').onclick = restart
