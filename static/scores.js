@@ -8,7 +8,7 @@ function showHighScores() {
 }
 function highScores(game) {
     let url = `https://miguepro.herokuapp.com/scores/${game}`
-    if (local_emulation == true) {
+    if (local_emulation === true) {
         url = `http://127.0.0.1:8000/scores/${game}`
     }
     // with one click on the screen the highscores will dissappear
