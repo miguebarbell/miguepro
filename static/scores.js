@@ -1,3 +1,4 @@
+const local_emulation = true
 const highScoresMessageElement = document.getElementById('highScores')
 const highScoresTextElement = document.querySelector('[data-high-scores-text]')
 // document.querySelector('#restartButton').onclick = restart
@@ -6,8 +7,10 @@ function showHighScores() {
     highScoresMessageElement.classList.add('show')
 }
 function highScores(game) {
-    // const url = `http://127.0.0.1:8000/scores/${game}`
-    const url = `https://miguepro.herokuapp.com/scores/${game}`
+    let url = `https://miguepro.herokuapp.com/scores/${game}`
+    if (local_emulation == true) {
+        url = `http://127.0.0.1:8000/scores/${game}`
+    }
     // with one click on the screen the highscores will dissappear
     highScoresMessageElement.onclick = () => {
         highScoresMessageElement.classList.add('hide')
@@ -36,7 +39,11 @@ function submitScore(game, result) {
     if (checkHighScore(game, result)) {
         const name = prompt(`You scored ${result}, whats your name?`)
         if ((name !== '') && (name != null)) {
-            const url = `https://miguepro.herokuapp.com/scores/s${game}`
+            let url = `https://miguepro.herokuapp.com/scores/s${game}`
+            if (local_emulation === true) {
+                url = `http://127.0.0.1:8000/scores/s${game}`
+            }
+            // const url = `https://miguepro.herokuapp.com/scores/s${game}`
             // const url = `http://127.0.0.1:8000/scores/s${game}`
             const data = { name: name, score: result }
             console.log(`name: ${name}: score: ${result}`)
@@ -54,8 +61,10 @@ function submitScore(game, result) {
         }
 }}
 function checkHighScore(game, score) {
-    // const url = `http://127.0.0.1:8000/scores/${game}`
-    const url = `https://miguepro.herokuapp.com/scores/${game}`
+    let url = `https://miguepro.herokuapp.com/scores/${game}`
+    if (local_emulation === true) {
+        url = `http://127.0.0.1:8000/scores/${game}`
+    }
     // let lowestScore
     try {
         fetch(url, {

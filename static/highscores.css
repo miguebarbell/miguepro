@@ -33,3 +33,21 @@
 #highScores.hide {
     display: none;
 }
+.hsTable {
+
+    display: grid;
+    grid-template-columns: 95vw;
+
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*justify-items: center;*/
+    /*align-items: center;*/
+
+    align-content: space-evenly;
+
+    /*background-color: green;*/
+    /*flex-direction: column;*/
+    height: 90vh;
+    width: 90vw;
+    font-size: 2.5vh;
+}
