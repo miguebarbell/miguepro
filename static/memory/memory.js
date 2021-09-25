@@ -191,3 +191,5 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard()
 
 })
+// todo: create a better alert for match
+// todo: get the score from the server working
