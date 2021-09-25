@@ -52,3 +52,18 @@ body {
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
   /* For landscape layouts only */
 }
+.match {
+    display: none;
+    /*display: flex;*/
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 0, 255, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.match::before {
+    font-size: 2rem;
+    color: white;
+    content: 'MATCH!';
+}

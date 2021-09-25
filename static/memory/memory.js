@@ -147,7 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[twoId].setAttribute('src', 'images/cover.jpeg')
         } else if (cardsChosen[0] === cardsChosen[1]) {
             // if (cardsChosenId[0] === cardsChosenId[1]) {
-                alert('Match')
+            //     alert('Match')
+                match()
                 cards[oneId].setAttribute('src', `${cardsChosenImg[0]}`)
                 cards[twoId].setAttribute('src', `${cardsChosenImg[0]}`)
                 cardsWon.push(cardsChosen)
@@ -163,14 +164,13 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDisplay.textContent = Number((cardsWon.length*1000/tries).toFixed(0))
         if (cardsWon.length === cardArray.length/2) {
             endGame()
-            // alert('YOU WON!')
-            // setTimeout(restart(), 5000)
         }
 
     }
     function endGame() {
         winningTextElement.innerText = `Discovered ${cardsWon.length} pairs,\n SCORE:${Number((cardsWon.length*1000/tries).toFixed(0))} CONGRATULATIONS,\n you made it!!`
         winningMessageElement.classList.add('show')
+        submitScore('memory', `${Number((cardsWon.length*1000/tries).toFixed(0))}`)
         document.querySelector('#finishButton').onclick = restart
     }
     function restart() {
@@ -191,5 +191,12 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard()
 
 })
-// todo: create a better alert for match
 // todo: get the score from the server working
+function match() {
+    const matchDiv = document.querySelector('.match')
+    matchDiv.style.display = 'flex'
+    setTimeout(() => {
+        matchDiv.style.display = 'none'
+    }, 500)
+}
+highScores('memory')
