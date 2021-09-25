@@ -37,7 +37,7 @@
 
     display: grid;
     grid-template-columns: 95vw;
-
+    margin-left: 20vw;
     /*display: flex;*/
     /*justify-content: center;*/
     /*justify-items: center;*/

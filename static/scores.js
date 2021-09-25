@@ -16,19 +16,19 @@ function highScores(game) {
         highScoresMessageElement.classList.add('hide')
     }
     // create the div where the highscores will be and set a class for further styling
-    const div = document.createElement('ol')
-    div.classList.add('hsTable')
+    const ol = document.createElement('ol')
+    ol.classList.add('hsTable')
     fetch(url, {
         method: 'GET'
     }).then(response => response.json())
         .then(data => {
-            div.innerHTML = '<h1>TOP 5 High Scores</h1>'
+            ol.innerHTML = '<h1>TOP 5 High Scores</h1>'
             for (let i = 0; i < 5; i++) {
                 console.log(data[i])
-                let divText = document.createElement('li')
-                divText.innerHTML = `<h3>NAME: ${data[i].name}</h3> <h4>SCORE: ${data[i].score}</h4>`
-                div.appendChild(divText)
-                highScoresTextElement.appendChild(div)
+                let li = document.createElement('li')
+                li.innerHTML = `<h3>NAME: ${data[i].name}</h3> <h4>SCORE: ${data[i].score}</h4>`
+                ol.appendChild(li)
+                highScoresTextElement.appendChild(ol)
             }
             highScoresMessageElement.classList.remove('hide')
             highScoresMessageElement.classList.add('show')
