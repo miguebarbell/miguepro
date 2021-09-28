@@ -60,7 +60,7 @@ body {
 }
 
 .cell.circle.red::before,
-.cell.circle.red::after,
+/*.cell.circle.red::after,*/
 .cell.x.red::before,
 .cell.x.red::after {
     background-color: red;
@@ -111,6 +111,7 @@ body {
 
 .cell.circle::before,
 .board.circle .cell:not(.x):not(.circle):hover::before {
+    mask: calc(var(--mark-size) * .7) center transparent;
     width: var(--mark-size);
     height: var(--mark-size);
 }
@@ -119,7 +120,9 @@ body {
 .board.circle .cell:not(.x):not(.circle):hover::after {
     width: calc(var(--mark-size) * .7);
     height: calc(var(--mark-size) * .7);
-    background-color: white;
+    /*background-color: white;*/
+    /*background-color: transparent;*/
+    background-image: linear-gradient(200deg, #003f81, #003a8c);
 }
 
 /*.winning-message {*/

@@ -18,3 +18,13 @@ function showMenu() {
         ham.style.setProperty('--ham2-h', '2.5rem')
     }
 }
+const nav = document.querySelector('nav')
+const menu = document.createElement('div')
+menu.innerHTML = '' +
+    '<div class= "mini-ham-container" onClick = "showMenu()"></div>' +
+    '<div class="menu">' +
+    '<a href="https://www.migue.pro/games.html">Games</a>' +
+    '<a href="https://www.migue.pro" title="not ready yet">DeepLearning</a>' +
+    '<a href="https://www.migue.pro/index.html">Home</a>' +
+    '<a href="mailto:contact@migue.pro" title="contact@migue.pro">Contact</a></div>'
+nav.appendChild(menu)
