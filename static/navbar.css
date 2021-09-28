@@ -38,11 +38,13 @@
 .mini-ham-container::before{
     top: var(--ham1-h);
     transform: rotate(var(--ham1-rot));
+    transition: all 0.3s ease;
     /*transform: rotate(-45deg);*/
 }
 .mini-ham-container::after {
     top: var(--ham2-h);
     transform: rotate(var(--ham2-rot));
+    transition: all 0.3s ease;
     /*transform: rotate(45deg);*/
 }
 
