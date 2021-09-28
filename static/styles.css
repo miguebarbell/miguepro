@@ -135,6 +135,7 @@ li {
     background: url(images/index/lanudo.jpg) fixed;
     background-size: cover;
     /*position: absolute;*/
+    padding: 1rem;
 
     /*padding: 20vh 0;*/
 }
@@ -163,10 +164,12 @@ li {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    max-height: 80%;
 }
 
 #profilepic {
-    width: 25%;
+    width: 10vw;
+    min-width: 200px;
     border-radius: 50%;
     padding: 1em;
 }
@@ -263,7 +266,8 @@ li {
         /*}*/
 
         #contact, #racoon {
-            background-size: contain;
+            /*background-size: contain;*/
+            background-size: cover;
         }
     }
 
