@@ -218,7 +218,6 @@ li {
         position: relative;
     }
     #web-programmer {
-        /*position: relative;*/
     }
 }
 
@@ -236,10 +235,6 @@ li {
     .main-title {
         font-size: 5rem;
     }
-    /*.content, #deep-learning {*/
-    /*    height: auto;*/
-    /*    position: relative;*/
-    /*}*/
 }
 
 @media screen and (max-width: 2130px) {
@@ -252,7 +247,6 @@ li {
 @media screen and (max-height: 900px) {
     .content, #web-programmer, #contact {
         height: auto;
-        /*position: relative;*/
     }
 
     .main-title {
@@ -260,13 +254,8 @@ li {
     }
 
     @media screen and (max-width: 320px) {
-        /*.content, #deep-learning {*/
-        /*    height: auto;*/
-        /*    position: relative;*/
-        /*}*/
 
         #contact, #racoon {
-            /*background-size: contain;*/
             background-size: cover;
         }
     }
@@ -281,7 +270,6 @@ li {
 .fa-envelope-square:hover {
     padding: 0.2rem;
     border-radius: 9px;
-
     background-color: rgba(9, 80, 255, 0.6);
 }
 
@@ -292,7 +280,6 @@ li {
 
 .nav-button {
     border: 2px solid rgba(30, 255, 144, 0.9);
-    /*border-radius: 15%;*/
     padding: 0.5em;
     cursor: pointer;
     background-color: rgba(30, 255, 144, 0.4);
@@ -309,7 +296,6 @@ li {
 }
 
 .menu,
-
 nav a {
     text-decoration: none;
 }
