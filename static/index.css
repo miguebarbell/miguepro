@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --hover-color: #03cdde;
+}
+#entrance {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+}
+#entrance img {
+    position: absolute;
+    object-fit: cover;
+    width: 100vw;
+    height: 110vh;
+    z-index: -1;
+}
+#lazy {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    width: 65vw;
+}
+#deep-learning {
+    color: white;
+    background-image: linear-gradient(200deg, rgb(76, 76 ,255), blue);
+    z-index: 10;
+}
+#spacer {
+    height: 30vh;
+    background-image: url(images/index/lanacar.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+p a {
+    color: white;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.content-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.content-images li a {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.content-images li:hover {
+    outline: 3px solid var(--hover-color);
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+.image-reference {
+    width: 480px;
+    height: 270px;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+section {
+    padding: 2rem 1rem;
+}
+section h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-family: 'Poppins', sans-serif;
+}
+section ul {
+    padding-bottom: 2rem;
+}
+p,
+.content-images li a {
+    font-family: 'Poppins', serif;
+}
+/*web-programmer*/
+#web-programmer {
+    color: white;
+    background-image: linear-gradient(200deg, rgba(0,0,0,.7), black);
+}
+/*contact card */
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    /*min-height: 70vh;*/
+    background: url(images/index/lanudo.jpg) fixed top center;
+    background-size: cover;
+    padding: 1rem;
+    color: black;
+}
+
+.glass {
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    backdrop-filter: blur(2rem);
+}
+.card {
+    border: 0 solid rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    padding: 2em;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-height: 80%;
+}
+.card h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 2rem;
+}
+#profilepic {
+    width: 10vw;
+    min-width: 100px;
+    border-radius: 50%;
+    padding: 1em;
+}
+.content-card {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60px;
+    max-height: 60px;
+    min-height: 40px;
+    min-width: 40px;
+    background-image: linear-gradient(200deg, red, blue);
+    color: white;
+    border-radius: 50%;
+}
+.links a:hover {
+    outline: 3px solid var(--hover-color);
+    /*outline-offset: -1px;*/
+    color: var(--hover-color);
+    transition: all 0.5s ease;
+}
+
+.legend {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.legend h3 {
+    padding-bottom: 1rem;
+    font-family: 'Birthstone', cursive;
+    font-size: 1.5rem;
+}

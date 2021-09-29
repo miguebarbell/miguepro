@@ -115,10 +115,9 @@
     width: 50px;
 }
 .home-icon:hover {
-    /*background-image: url('https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/000000/external-home-miscellaneous-kiranshastry-lineal-kiranshastry.png');*/
     background-image: url("https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-home-miscellaneous-kiranshastry-gradient-kiranshastry.png");
     background-size: cover;
     z-index: 1;
-    border: 2px solid #03cdde;
-    padding: 2px;
+    border: 3px solid #03cdde;
+    transition: all 0.5s ease;
 }

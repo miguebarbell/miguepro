@@ -74,8 +74,24 @@ function get_excuse() {
 	return excuses[Math.floor(Math.random() * excuses.length)];
 }
 
+const lazyElement = document.querySelector('#lazy')
+const bg = document.querySelector('#bg');
+const lana = document.querySelector('#lana');
+const pasto = document.querySelector('#pasto');
+const ratio = 5
+const section = document.querySelector('#deep-learning')
 function load_excuse() {
-	document.querySelector('.main-title').innerHTML = `${get_excuse()}`
+	lazyElement.innerHTML = `${get_excuse()}`
 }
+window.addEventListener('scroll', () => {
+	let value = window.scrollY;
+	lazyElement.style.color = `rgb(${value/3},${value/5},${value/20})`
+	lazyElement.style.marginLeft = value + 'px'
+	lazyElement.style.marginTop = value/3 + 'px'
+	section.style.marginTop = -value/ratio + 'px';
+	bg.style.marginTop = -value/ratio + 'px';
+	lana.style.marginTop = value*2/ratio + 'px';
+	pasto.style.marginTop = value/ratio + 'px';
 
+})
 
