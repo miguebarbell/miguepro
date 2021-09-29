@@ -181,3 +181,24 @@ p,
     font-family: 'Birthstone', cursive;
     font-size: 1.5rem;
 }
+body::after {
+    position: fixed;
+    font-size: 2.5rem;
+    content: 'FEEDBACK';
+    color: white;
+    bottom: 1%;
+    right: 1%;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    background-image: url(images/index/neon.gif);
+    -webkit-background-clip: text; color: rgba(0,0,0,0.08);
+    animation: zoomout 10s ease 500ms forwards;
+}
+@keyframes zoomout {
+  from {
+    background-size: 40%;
+  }
+  to {
+    background-size: 10%;
+  }
+}
