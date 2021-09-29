@@ -4,8 +4,13 @@
     box-sizing: border-box;
     --hover-color: #03cdde;
 }
+
 html {
   scroll-behavior: smooth;
+}
+body, html {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 #entrance {
     padding: 0;
@@ -33,6 +38,7 @@ html {
     color: white;
     background-image: linear-gradient(200deg, rgb(76, 76 ,255), blue);
     z-index: 10;
+    width: 100vw;
 }
 #spacer {
     height: 30vh;
@@ -181,10 +187,9 @@ p,
     font-family: 'Birthstone', cursive;
     font-size: 1.5rem;
 }
-body::after {
+#feed-element {
     position: fixed;
     font-size: 2.5rem;
-    content: 'FEEDBACK';
     color: white;
     bottom: 1%;
     right: 1%;
@@ -201,4 +206,18 @@ body::after {
   to {
     background-size: 10%;
   }
+}
+body::-webkit-scrollbar {
+    width: 0.5em;
+    height: 1em;
+}
+body::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(200deg, rgba(0,0,255, .5), rgba(255,0, 255, .5), rgba(0,0,255, .5));
+    border-radius: 100vw;
+}
+body::-webkit-scrollbar-track-piece {
+    background: rgb(0,0,0);
+}
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255, 0.5);
 }
