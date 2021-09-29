@@ -33,7 +33,8 @@ menu.innerHTML = '' +
     '<div class= "mini-ham-container" onClick = "showMenu()"></div>' +
     '<div class="menu">' +
     '<a href="https://www.migue.pro/games.html">Games</a>' +
-    '<a href="https://www.migue.pro" title="not ready yet">DeepLearning</a>' +
-    '<a href="https://www.migue.pro/index.html">Home</a>' +
-    '<a href="mailto:contact@migue.pro" title="contact@migue.pro">Contact</a></div>'
+    '<a href="https://www.migue.pro/#deeplearning" title="Deep Learning Projects">DeepLearning</a>' +
+    '<a href="https://www.migue.pro/#web-programmer" title="Web Programmer Projects">Web Programmer</a>' +
+    '<a href="https://www.migue.pro/index.html" title="Home" class="home-icon"/></a>' +
+    '<a href="https://www.migue.pro/#contact" title="contact@migue.pro">Contact</a></div>'
 nav.appendChild(menu)
