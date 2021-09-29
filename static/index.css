@@ -4,6 +4,9 @@
     box-sizing: border-box;
     --hover-color: #03cdde;
 }
+html {
+  scroll-behavior: smooth;
+}
 #entrance {
     padding: 0;
     margin: 0;
