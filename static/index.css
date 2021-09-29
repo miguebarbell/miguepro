@@ -81,6 +81,7 @@ li {
 }
 section {
     padding: 2rem 1rem;
+    width: 100vw;
 }
 section h1 {
     text-align: center;
