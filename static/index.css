@@ -48,6 +48,7 @@ body, html {
 p {
     text-align: justify;
     text-justify: inter-word;
+    font-size: 2rem;
 }
 p a {
     color: white;
@@ -90,6 +91,7 @@ section h1 {
     text-align: center;
     padding-bottom: 2rem;
     font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
 }
 section ul {
     padding-bottom: 2rem;
@@ -188,7 +190,7 @@ p,
 .legend h3 {
     padding-bottom: 1rem;
     font-family: 'Birthstone', cursive;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 #feed-element {
     position: fixed;
