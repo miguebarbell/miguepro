@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
     --hover-color: #03cdde;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
 }
 
 html {
