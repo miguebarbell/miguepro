@@ -1,12 +1,10 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     --hover-color: #03cdde;
-    overflow-x: hidden;
-    width: 100vw;
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
@@ -32,19 +30,13 @@ body, html {
 }
 #lazy {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 10%;
     font-family: 'Poppins', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     width: 65vw;
-    text-overflow: clip;
 }
-#deep-learning {
-    color: white;
-    background-image: linear-gradient(200deg, rgb(76, 76 ,255), blue);
-    z-index: 10;
-    width: 100vw;
-}
+
 #spacer {
     height: 30vh;
     background-image: url(images/index/lanacar.jpg);
@@ -106,6 +98,13 @@ p,
 .content-images li a {
     font-family: 'Poppins', serif;
 }
+/*deep-learning*/
+#deep-learning {
+    color: white;
+    background-image: linear-gradient(200deg, rgb(76, 76 ,255), blue);
+    z-index: 10;
+    /*width: 100vw;*/
+}
 /*web-programmer*/
 #web-programmer {
     color: white;
@@ -117,7 +116,6 @@ p,
     align-items: center;
     justify-content: center;
     z-index: 2;
-    /*min-height: 70vh;*/
     background: url(images/index/lanudo.jpg) fixed top center;
     background-size: cover;
     padding: 1rem;
@@ -195,7 +193,6 @@ p,
 #feed-element {
     position: fixed;
     font-size: 2.5rem;
-    color: white;
     bottom: 1%;
     right: 1%;
     font-family: 'Red Hat Display', sans-serif;
@@ -203,6 +200,7 @@ p,
     background-image: url(images/index/neon.gif);
     -webkit-background-clip: text; color: rgba(0,0,0,0.08);
     animation: zoomout 10s ease 500ms forwards;
+    /*text-shadow: 1px 1px 5px rgba(0,0,0, 0.3);*/
 }
 @keyframes zoomout {
   from {

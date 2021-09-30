@@ -90,7 +90,7 @@ window.addEventListener('scroll', () => {
 	} else {
 		lazyElement.style.color = `rgba(${value/3},${value/5},${value/20}, ${value/(0.00001+value+value*2)})`
 	}
-	lazyElement.style.marginLeft = value + 'px'
+	// lazyElement.style.marginLeft = value + 'px'
 	lazyElement.style.marginTop = value/3 + 'px'
 	section.style.marginTop = -value/ratio + 'px';
 	bg.style.marginTop = -value/ratio + 'px';
