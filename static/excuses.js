@@ -88,7 +88,8 @@ window.addEventListener('scroll', () => {
 	if (value === 0) {
 		lazyElement.style.color = 'black'
 	} else {
-		lazyElement.style.color = `rgba(${value/3},${value/5},${value/20}, ${value/(0.00001+value+value*2)})`
+		lazyElement.style.color = `rgb(${value/3},${value/5},${value/20})`
+		// lazyElement.style.color = `rgba(${value/3},${value/5},${value/20}, ${value/(0.00001+value+value*2)})`
 	}
 	// lazyElement.style.marginLeft = value + 'px'
 	lazyElement.style.marginTop = value/3 + 'px'
