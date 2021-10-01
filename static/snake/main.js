@@ -16,24 +16,23 @@ let finishGame = false
 let firstInterval = 1000
 let score = document.querySelector('#result')
 // put a class for the borders
-const squares = grid.childNodes
+const squares = document.querySelectorAll('.square')
 let interval
 let e
-// console.log(squares.length)
 
-for (let i=1; i<= 100; i++) {
+for (let i=0; i<= 100; i++) {
     squares[i].classList.add('top')
     squares[i].classList.add('border')
 }
-for (let i=100; i<= 8000; i += 100) {
+for (let i=99; i< 8000; i += 100) {
     squares[i].classList.add('right')
     squares[i].classList.add('border')
 }
-for (let i=1; i<= 8000; i += 100) {
+for (let i=0; i< 8000; i += 100) {
     squares[i].classList.add('left')
     squares[i].classList.add('border')
 }
-for (let i=7901; i<=8000; i++) {
+for (let i=7900; i<8000; i++) {
     squares[i].classList.add('bottom')
     squares[i].classList.add('border')
 }
@@ -107,6 +106,37 @@ function leadSnake(e) {
             moveSnake()
         }
 }}
+function leadSnakeTouch(side) {
+    if (pause === false) {
+        if (side === 'right') {
+            // right
+            direction = 1
+            moveSnake()
+        } else if (side === 'down') {
+            // down
+            direction = width
+            moveSnake()
+        } else if (side === 'left') {
+            // left
+            direction = -1
+            moveSnake()
+        } else if (side === 'up') {
+            // up
+            direction = -width
+            moveSnake()
+        }
+    }
+}
+function resizeControls() {
+    let gridWidth = document.querySelector('#grid').offsetWidth
+    let gridHeight = document.querySelector('#grid').offsetHeight
+    document.querySelector('#divTouch').style.width = gridWidth + 'px'
+    document.querySelector('#divTouch').style.height = gridHeight + 'px'
+}
+resizeControls()
+window.addEventListener('resize', () => {
+    resizeControls()
+})
 document.addEventListener('keydown', leadSnake)
 function endGame() {
     // finish the game
@@ -127,60 +157,6 @@ function restart() {
     window.location.reload()
 }
 
-// // HighScore related auxiliary functions
-// const highScoresMessageElement = document.getElementById('highScores')
-// const highScoresTextElement = document.querySelector('[data-high-scores-text]')
-// document.querySelector('#restartButton').onclick = restart
-// function showHighScores() {
-//     highScoresMessageElement.classList.remove('hide')
-//     highScoresMessageElement.classList.add('show')
-// }
-// function highScores() {
-// //     // const url = 'http://127.0.0.1:8000/scores/wam'
-//     const url = 'https://miguepro.herokuapp.com/scores/wam'
-// //     // with one click on the screen the highscores will dissappear
-//     highScoresMessageElement.onclick = () => {
-//         highScoresMessageElement.classList.add('hide')
-//     }
-// //     // create the div where the highscores will be and set a class for further styling
-//     const div = document.createElement('div')
-//     div.classList.add('hsTable')
-//     fetch(url, {
-//        method: 'GET'
-//     }).then(response => response.json())
-//         .then(data => {
-//         div.innerHTML = '<h1>TOP 5 High Scores</h1>'
-//         for (let i = 0; i < 5; i++) {
-//             console.log(data[i])
-//             let divText = document.createElement('p')
-//             divText.innerHTML = `<h3>NAME: ${data[i].name}</h3> <h4>SCORE: ${data[i].score}</h4>`
-//             div.appendChild(divText)
-//             highScoresTextElement.appendChild(div)
-//         }
-//         highScoresMessageElement.classList.remove('hide')
-//         highScoresMessageElement.classList.add('show')
-//         })
-// }
-// function submitScore(result) {
-//     const name = prompt(`You scored ${result}, whats your name?`)
-//     if ((name !== '') && (name != null)) {
-//         const url = 'https://miguepro.herokuapp.com/scores/swam'
-//         // const url = 'http://127.0.0.1:8000/scores/swam'
-//         const data = { name: name, score: result }
-//         console.log(`name: ${name}: score: ${result}`)
-//         fetch(url, {
-//             headers: {
-//                 // 'Accept': 'application/json',
-//                 'Content-Type': 'application/json'
-//             },
-//             method: "POST",
-//             body: JSON.stringify(data)}).then(response => {
-//             console.log(response)
-//         })
-//     } else {
-//         console.log('Not entered any name')
-//     }
-// }
 highScores('snake')
 function pauseGame() {
     let button = document.querySelector('#Pause')

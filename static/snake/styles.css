@@ -50,3 +50,45 @@ body {
 .border {
     background-color: #373737
 }
+#leftDiv {
+    /*left: 0;*/
+    /*background-color: rgba(0,255, 0, .3);*/
+    grid-area: left;
+    width: 100%;
+    height: 100%;
+}
+#rightDiv {
+    /*right: 0;*/
+    /*background-color: rgba(0,0,255, .3);*/
+    width: 100%;
+    height: 100%;
+    grid-area: right;
+}
+#upDiv {
+    /*background-color: rgba(255,0,255, .3);*/
+    height: 100%;
+    width: 100%;
+    grid-area: up;
+}
+
+#downDiv {
+    grid-area: down;
+    /*background-color: rgba(0,255,255, .3);*/
+    height: 100%;
+    width: 100%;
+}
+.controls {
+    /*bottom: 0;*/
+    position: absolute;
+    /*height: 80vh;*/
+    /*width: 50vw;*/
+}
+#divTouch {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-areas: 'up up' 'left right' 'down down';
+    grid-template-columns: auto;
+    grid-auto-rows: 20% auto 20%;
+}

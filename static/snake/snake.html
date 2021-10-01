@@ -13,6 +13,7 @@
 <body>
     <nav>
     </nav>
+
     <div class="board">
         <h3>Score:<span id="result">0</span></h3>
         <br>
@@ -20,6 +21,13 @@
         <button id="Pause" onclick="pauseGame()">Start</button>
         <br>
         <br>
+        <div id="divTouch">
+            <div id="upDiv" class="controls" onclick="leadSnakeTouch('up')"></div>
+            <div id="rightDiv" class="controls" onclick="leadSnakeTouch('right')"></div>
+            <div id="leftDiv" class="controls" onclick="leadSnakeTouch('left')"></div>
+            <div id="downDiv" class="controls" onclick="leadSnakeTouch('down')"></div>
+
+        </div>
         <div id="grid">
         </div>
     </div>
@@ -29,7 +37,6 @@
     </div>
     <div id="highScores">
         <div data-high-scores-text></div>
-        <!--    <button id="closeHighScores">Close</button>-->
     </div>
     <script src="../scores.js"></script>
     <script src="main.js"></script>
