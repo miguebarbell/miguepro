@@ -14,12 +14,13 @@
 }
 
 .winning-message button {
-    font-size: 3rem;
+    font-size: 4.8vw;
     background-color: white;
     border: 1px solid black;
     cursor: pointer;
     padding: .25em .5em;
-    border-radius: 5%
+    border-radius: 5%;
+    max-width: 40vw;
 }
 
 .winning-message button:hover {
@@ -30,4 +31,9 @@
 
 .winning-message.show {
     display: flex;
+}
+.winning-message div {
+    max-width: 95vw;
+    text-justify: auto;
+    font-size: 60vw;
 }

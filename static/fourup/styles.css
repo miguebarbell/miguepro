@@ -4,6 +4,7 @@
 }
 body {
     margin: 0;
+
 }
 
 .board {
@@ -11,9 +12,10 @@ body {
     display: flex;
     align-items: center;
     justify-items: center;
-
+    flex-direction: column;
     justify-content: center;
     align-content: center;
+    max-width: 95vw;
 }
 #grid {
     /*width: 60vh;*/
@@ -31,8 +33,11 @@ body {
     margin: 2rem;
 }
 #grid div {
-    width: 4rem;
-    height: 4rem;
+    max-width: 12vw;
+    max-height: 12vw;
+    width: 75px;
+    height: 75px;
+    /*height: 4rem;*/
     /*border: 1px solid lightgray;*/
 }
 .player-one {
