@@ -45,15 +45,21 @@ button.onclick = () => {
 		    },
 		    method: "POST",
 		    body: JSON.stringify(data)}).then(response => {
-			    console.log(response)
+			    // console.log(response)
 		    })
 
 	    }
         console.log('Feedback sent!. Thanks for reaching out')
-        displayingFeedbackElement = false
-        document.querySelector('body').removeChild(formDiv)
-        name.value = ''
-        feedbackText.value = ''
+
+        formDiv.removeChild(form)
+        formDiv.innerText = 'Thanks for share your feedback!'
+        setTimeout(() => {
+            displayingFeedbackElement = false
+            document.querySelector('body').removeChild(formDiv)
+            name.value = ''
+            feedbackText.value = ''
+        }, 1500)
+
         // alert('Server is down, please reach at contact@migue.pro')
 
     
@@ -61,6 +67,10 @@ button.onclick = () => {
 form.append(button)
 // say thanks after the button
 formDiv.append(form)
+
+
+
+
 feedElement.onclick = () => {
     if (displayingFeedbackElement) {
         displayingFeedbackElement = false
@@ -71,4 +81,5 @@ feedElement.onclick = () => {
     }
 }
 bodyElement.appendChild(feedElement)
+formDiv.appendChild(thanksDiv)
 
