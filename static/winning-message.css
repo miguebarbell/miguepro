@@ -35,5 +35,5 @@
 .winning-message div {
     max-width: 95vw;
     text-justify: auto;
-    font-size: 60vw;
+    /*font-size: 60vw;*/
 }

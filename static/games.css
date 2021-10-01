@@ -69,7 +69,7 @@
 .whackamole{
     background-image: url('whackamole/whackamole.gif')
 }
-.snake{
+.snakee{
     background-image: url('snake/snake.gif')
 }
 .fourup{
@@ -143,4 +143,15 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     background-image: linear-gradient(200deg, #00613d, blue);
+}
+#restartButton,
+#Pause,
+#showHighScoreButton {
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+#restartButton:hover,
+#Pause:hover,
+#showHighScoreButton:hover {
+    outline: 3px solid var(--hover-color)
 }

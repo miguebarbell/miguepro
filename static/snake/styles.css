@@ -25,6 +25,8 @@ body {
 .square {
     height: 1vh;
     width: 1vh;
+    max-height: 1vw;
+    max-width: 1vw;
 }
 .snake {
     background-color: #4caf50;

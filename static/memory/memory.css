@@ -34,8 +34,8 @@ body {
     align-content: center;
 }
 .card {
-    height: 10vw;
-    width: 10vw;
+    max-height: 15vw;
+    max-width: 15vw;
 }
 /*add support for ipad screen*/
 @media only screen and (device-width: 768px) {

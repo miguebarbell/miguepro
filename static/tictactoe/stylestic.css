@@ -13,6 +13,7 @@ body {
 }
 
 .board {
+    padding-top: 30%;
     width: 100vw;
     height: 80vh;
     display: grid;
@@ -24,8 +25,10 @@ body {
 }
 
 .cell {
-    width: var(--cell-size);
-    height: var(--cell-size);
+    max-width: var(--cell-size);
+    max-height: var(--cell-size);
+    width: 30vw;
+    height: 30vw;
     border: 1px solid black;
     cursor: pointer;
     display: flex;
