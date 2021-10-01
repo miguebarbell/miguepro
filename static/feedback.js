@@ -53,6 +53,7 @@ button.onclick = () => {
 
         formDiv.removeChild(form)
         formDiv.innerText = 'Thanks for share your feedback!'
+        formDiv.style.fontWeight = 'bold'
         setTimeout(() => {
             displayingFeedbackElement = false
             document.querySelector('body').removeChild(formDiv)
