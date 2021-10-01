@@ -132,13 +132,14 @@ p,
     border: 0 solid rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     padding: 2em;
-    width: 50%;
+    max-width: 1000px;
     height: 70%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     max-height: 80%;
+    width: 80%;
 }
 .card h1 {
     font-family: 'Lato', sans-serif;
@@ -146,7 +147,7 @@ p,
 }
 #profilepic {
     width: 10vw;
-    min-width: 100px;
+    min-width: 200px;
     border-radius: 50%;
     padding: 1em;
 }
