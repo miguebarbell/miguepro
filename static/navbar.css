@@ -1,4 +1,5 @@
 .mini-ham-container {
+    cursor: pointer;
     position: fixed;
     min-height: 35px;
     max-height: 40px;
