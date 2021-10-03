@@ -52,7 +52,7 @@ button.onclick = () => {
         console.log('Feedback sent!. Thanks for reaching out')
 
         formDiv.removeChild(form)
-        formDiv.innerText = 'Thanks for share your feedback!'
+        formDiv.innerText = 'Thanks for sharing your feedback!.\nReload the page to send another feedback again.'
         formDiv.style.fontWeight = 'bold'
         setTimeout(() => {
             displayingFeedbackElement = false
