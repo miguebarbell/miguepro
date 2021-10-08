@@ -86,7 +86,7 @@
     align-items: center;
     font-size: 5rem;
     color: white;
-    left: 0;
+    right: 0;
     top: 0;
     transition: all 0.3s ease;
 }
@@ -105,6 +105,7 @@
     font-weight: 400;
     text-decoration: none;
     color: white;
+    /*animation: deBlur 1s ease;*/
 }
 .home-icon {
     position: fixed;
@@ -121,4 +122,35 @@
     z-index: 1;
     border: 3px solid #03cdde;
     transition: all 0.5s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+
+        width: 0;
+    }
+    to {
+        width: 100vw;
+    }
+}
+@keyframes slideInRight {
+    from {
+        width: 100vw;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes deBlur {
+   from {
+       filter: blur(30px);
+   }
+}
+@keyframes blur {
+    from {
+        filter: blur(1px);
+    }
+    to {
+        filter: blur(30px);
+    }
 }

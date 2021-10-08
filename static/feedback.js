@@ -82,5 +82,5 @@ feedElement.onclick = () => {
     }
 }
 bodyElement.appendChild(feedElement)
-formDiv.appendChild(thanksDiv)
+// formDiv.appendChild(thanksDiv)
 
