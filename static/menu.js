@@ -32,10 +32,10 @@ const menu = document.createElement('div')
 menu.innerHTML = '' +
     '<div class= "mini-ham-container" onClick = "showMenu()"></div>' +
     '<div class="menu">' +
-    '<a href="https://www.migue.pro/games.html">Games</a>' +
-    '<a href="https://www.migue.pro/#deeplearning" title="Deep Learning Projects">DeepLearning</a>' +
-    '<a href="https://www.migue.pro/#web-programmer" title="Web Programmer Projects">Web Programmer</a>' +
-    '<a href="https://www.migue.pro/index.html" title="Home" class="home-icon"/></a>' +
-    '<a href="https://www.migue.pro/#contact" title="contact@migue.pro">Contact</a></div>'
+    '<a href="/static/games/games.html">Games</a>' +
+    '<a href="index.html/#deeplearning" title="Deep Learning Projects">DeepLearning</a>' +
+    '<a href="index.html/#web-programmer" title="Web Programmer Projects">Web Programmer</a>' +
+    '<a href="/index.html" title="Home" class="home-icon"/></a>' +
+    '<a href="index.html/#contact" title="contact@migue.pro">Contact</a></div>'
 nav.appendChild(menu)
 
