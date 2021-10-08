@@ -38,4 +38,3 @@ menu.innerHTML = '' +
     '<a href="/index.html" title="Home" class="home-icon"/></a>' +
     '<a href="/index.html#contact" title="contact@migue.pro">Contact</a></div>'
 nav.appendChild(menu)
-
