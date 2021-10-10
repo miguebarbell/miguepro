@@ -194,6 +194,39 @@ p,
     font-family: 'Birthstone', cursive;
     font-size: 3rem;
 }
+
+.fixed-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 7vw;
+    height: 3vw;
+    min-width: 70px;
+    margin-bottom: 5px;
+}
+.fixed-icons a {
+    height: 30px;
+    width: 30px;
+    /*background-color: black;*/
+    background-color: rgba(0,0,0,0.5);
+    /*background-image: linear-gradient(200deg, orange, red, purple);*/
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fixed-icons a:hover {
+    outline: 2px solid var(--hover-color);
+    /*outline-offset: -1px;*/
+    color: var(--hover-color);
+    transition: all 0.3s ease;
+}
+
+
 #feed-element {
     cursor: pointer;
     position: fixed;
