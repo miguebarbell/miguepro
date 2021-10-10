@@ -55,11 +55,15 @@ button.onclick = () => {
         formDiv.innerText = 'Thanks for sharing your feedback!.\nReload the page to send another feedback again.'
         formDiv.style.fontWeight = 'bold'
         setTimeout(() => {
-            displayingFeedbackElement = false
-            document.querySelector('body').removeChild(formDiv)
-            name.value = ''
-            feedbackText.value = ''
-        }, 1500)
+            formDiv.style.animation = 'blur 1s ease'
+            setTimeout(() => {
+                displayingFeedbackElement = false
+                document.querySelector('body').removeChild(formDiv)
+                name.value = ''
+                feedbackText.value = ''
+            }, 1000)
+
+        }, 5000)
 
         // alert('Server is down, please reach at contact@migue.pro')
 
