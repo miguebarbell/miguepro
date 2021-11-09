@@ -197,27 +197,26 @@ p,
 
 .fixed-icons {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: end;
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 7vw;
-    height: 3vw;
-    min-width: 70px;
     margin-bottom: 5px;
+    margin-left: 5px;
+
 }
 .fixed-icons a {
-    height: 30px;
-    width: 30px;
-    /*background-color: black;*/
+    height: 45px;
+    width: 45px;
     background-color: rgba(0,0,0,0.5);
-    /*background-image: linear-gradient(200deg, orange, red, purple);*/
     border-radius: 50%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5px;
 }
 .fixed-icons a:hover {
     outline: 2px solid var(--hover-color);
