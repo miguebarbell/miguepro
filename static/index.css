@@ -29,6 +29,7 @@ body, html {
     z-index: -1;
 }
 #lazy {
+    cursor: pointer;
     background-color: rgba(255, 255, 255, .05);
     padding: 1rem 1.5rem;
     border-radius: 10px;
@@ -46,14 +47,26 @@ body, html {
     justify-content: center;
 }
 
-#lazy:hover::before {
-    background-color: var(--hover-color);
+#lazy:hover {
+    color: transparent;
+}
+
+#lazy:hover::after {
+    /*background-color: var(--hover-color);*/
+    color: black;
+    /*background-color: rgba(255, 255, 255, .05);*/
+    /*backdrop-filter: blur(15px);*/
     content: 'click for another phrase';
     position: absolute;
     border-radius: 10px;
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
     padding: 0.5rem;
-
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-justify: inter-word;
 }
 
 #spacer {

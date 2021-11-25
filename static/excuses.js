@@ -83,12 +83,21 @@ const section = document.querySelector('#deep-learning')
 function load_excuse() {
 	lazyElement.innerHTML = `${get_excuse()}`
 }
+let transformedColor = 'black'
+lazyElement.addEventListener('mouseover', (e) => {
+	lazyElement.style.color = 'transparent';
+})
+lazyElement.addEventListener('mouseout', (e) => {
+	lazyElement.style.color = transformedColor;
+})
 window.addEventListener('scroll', () => {
 	let value = window.scrollY;
 	if (value === 0) {
-		lazyElement.style.color = 'black'
+		lazyElement.style.color = 'black';
 	} else {
-		lazyElement.style.color = `rgb(${value/3},${value/5},${value/20})`
+		transformedColor = `rgb(${value/3},${value/5},${value/20})`;
+		lazyElement.style.color = transformedColor;
+		// lazyElement.style.color = `rgb(${value/3},${value/5},${value/20})`;
 		// lazyElement.style.color = `rgba(${value/3},${value/5},${value/20}, ${value/(0.00001+value+value*2)})`
 	}
 	// lazyElement.style.marginLeft = value + 'px'
