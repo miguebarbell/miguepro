@@ -29,12 +29,31 @@ body, html {
     z-index: -1;
 }
 #lazy {
+    background-color: rgba(255, 255, 255, .05);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
     position: absolute;
     top: 30%;
     left: 10%;
     font-family: 'Poppins', sans-serif;
     font-size: 4rem;
     width: 65vw;
+    text-align: justify;
+    text-justify: inter-word;
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#lazy:hover::before {
+    background-color: var(--hover-color);
+    content: 'click for another phrase';
+    position: absolute;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+
 }
 
 #spacer {
