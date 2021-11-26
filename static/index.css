@@ -28,6 +28,9 @@ body, html {
     height: 110vh;
     z-index: -1;
 }
+#lana {
+		top: 7%;
+}
 #lazy {
     cursor: pointer;
     background-color: rgba(255, 255, 255, .05);
