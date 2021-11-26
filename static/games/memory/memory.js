@@ -1,4 +1,3 @@
-// todo: create a level chooser
 document.addEventListener('DOMContentLoaded', () => {
     const cardArray = [
 
@@ -146,8 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[oneId].setAttribute('src', 'images/cover.jpeg')
             cards[twoId].setAttribute('src', 'images/cover.jpeg')
         } else if (cardsChosen[0] === cardsChosen[1]) {
-            // if (cardsChosenId[0] === cardsChosenId[1]) {
-            //     alert('Match')
                 match()
                 cards[oneId].setAttribute('src', `${cardsChosenImg[0]}`)
                 cards[twoId].setAttribute('src', `${cardsChosenImg[0]}`)
@@ -191,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
     createBoard()
 
 })
-// todo: get the score from the server working
 function match() {
     const matchDiv = document.querySelector('.match')
     matchDiv.style.display = 'flex'
