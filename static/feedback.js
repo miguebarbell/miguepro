@@ -49,7 +49,7 @@ button.onclick = () => {
 		    })
 
 	    }
-        console.log('Feedback sent!. Thanks for reaching out')
+        // console.log('Feedback sent!. Thanks for reaching out')
 
         formDiv.removeChild(form)
         formDiv.innerText = 'Thanks for sharing your feedback!.\nReload the page to send another feedback again.'
